@@ -9,8 +9,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
 		<link
 			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap"
 			rel="stylesheet"
@@ -21,25 +23,36 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 
 		<main>
+			<!-- HERO -->
 			<section class="hero" aria-labelledby="hero-title">
 				<img
 					class="hero-image"
 					src="/images/studio-hero.jpg"
 					alt="A warm handmade studio table with plants, flowers, cards, mosaic pieces, scissors and craft supplies."
 				/>
+
 				<div class="hero-wash" aria-hidden="true"></div>
 
 				<div class="hero-content">
 					<p class="eyebrow">THE THANK YOU CO.</p>
-					<h1 id="hero-title">a little studio<br />of handmade things</h1>
+
+					<h1 id="hero-title">
+						a little studio<br />
+						of handmade things
+					</h1>
+
 					<p class="hero-copy">
 						Paper, plants, mosaics, and small-batch pieces made slowly,
 						thoughtfully, and with a soft spot for the little details.
 					</p>
-					<a class="quiet-link" href="#studio">wander through the studio <span>→</span></a>
+
+					<a class="quiet-link" href="#studio">
+						wander through the studio <span>→</span>
+					</a>
 				</div>
 			</section>
 
+			<!-- ABOUT THE STUDIO -->
 			<section class="intro section" id="about">
 				<div class="shell intro-grid">
 					<div class="intro-mark">
@@ -51,22 +64,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 					<div class="intro-copy">
 						<p class="section-label">A LITTLE ABOUT THE STUDIO</p>
+
 						<h2>Things made to be kept, gifted, used, and loved.</h2>
+
 						<p>
 							The Thank You Co. is a small creative studio for handmade things:
 							paper goods, mosaics, botanical pieces, seasonal curiosities, and
 							whatever else happens to find its way onto the worktable.
 						</p>
+
 						<p>
 							Everything is made in small batches with a little nostalgia, a little
 							imperfection, and a lot of attention to the details that make something
 							feel personal.
 						</p>
-						<p class="script-note">made slowly. given lovingly.</p>
+
+						<p class="script-note">
+							made slowly. given lovingly.
+						</p>
 					</div>
 				</div>
 			</section>
 
+			<!-- FROM THE WORKTABLE -->
 			<section class="studio section" id="studio">
 				<div class="shell">
 					<div class="section-heading">
@@ -74,6 +94,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							<p class="section-label">FROM THE WORKTABLE</p>
 							<h2>What lives here.</h2>
 						</div>
+
 						<p class="section-sidecopy">
 							A rotating collection of useful things, sentimental things,
 							plantish things, and little experiments that simply felt worth making.
@@ -81,16 +102,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					</div>
 
 					<div class="category-grid">
+
+						<!-- PAPER GOODS -->
 						<article class="category">
-							<div class="category-image paper-goods" aria-hidden="true">
-								<div class="paper-card card-one">thank you</div>
-								<div class="paper-card card-two"></div>
-								<div class="paper-card card-three"></div>
-								<span class="tiny-daisy">✿</span>
+							<div class="category-photo-wrap">
+								<img
+									class="category-photo"
+									src="/images/papers.jpeg"
+									alt="Stacks of handmade botanical paper tied with twine."
+									loading="lazy"
+								/>
 							</div>
+
 							<div class="category-copy">
 								<p class="number">01</p>
+
 								<h3>Paper goods</h3>
+
 								<p>
 									Handmade notes, seed paper, small stationery runs, and pieces
 									meant to feel good in your hand.
@@ -98,18 +126,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							</div>
 						</article>
 
+						<!-- MOSAICS -->
 						<article class="category">
-							<div class="category-image mosaic-goods" aria-hidden="true">
-								<div class="mosaic-grid">
-									<span></span><span></span><span></span><span></span>
-									<span></span><span></span><span></span><span></span>
-									<span></span><span></span><span></span><span></span>
-									<span></span><span></span><span></span><span></span>
-								</div>
+							<div class="category-photo-wrap">
+								<img
+									class="category-photo"
+									src="/images/mosaics.jpeg"
+									alt="Colorful handmade mosaic trays arranged in a warm studio setting."
+									loading="lazy"
+								/>
 							</div>
+
 							<div class="category-copy">
 								<p class="number">02</p>
+
 								<h3>Mosaics</h3>
+
 								<p>
 									Small decorative pieces, coasters, trays, and colorful
 									objects with an intentionally handmade rhythm.
@@ -117,28 +149,34 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							</div>
 						</article>
 
+						<!-- BOTANICAL THINGS -->
 						<article class="category">
-							<div class="category-image botanical-goods" aria-hidden="true">
-								<div class="stem"></div>
-								<span class="leaf l1"></span>
-								<span class="leaf l2"></span>
-								<span class="leaf l3"></span>
-								<span class="leaf l4"></span>
-								<span class="flower">✿</span>
+							<div class="category-photo-wrap">
+								<img
+									class="category-photo"
+									src="/images/propies.jpeg"
+									alt="Plant propagations rooting in clear glass vessels."
+									loading="lazy"
+								/>
 							</div>
+
 							<div class="category-copy">
 								<p class="number">03</p>
+
 								<h3>Botanical things</h3>
+
 								<p>
 									Propagations, plant-inspired gifts, natural textures,
 									and little green things for quiet corners.
 								</p>
 							</div>
 						</article>
+
 					</div>
 				</div>
 			</section>
 
+			<!-- ABOUT GRACE -->
 			<section class="maker section">
 				<div class="shell maker-grid">
 					<div class="maker-photo-wrap">
@@ -146,28 +184,47 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							class="maker-photo"
 							src="/images/about-grace.PNG"
 							alt="Portrait of Grace, maker behind The Thank You Co."
+							loading="lazy"
 						/>
 					</div>
 
 					<div class="maker-copy">
 						<p class="section-label">BEHIND THE STUDIO</p>
+
 						<h2>Hello, I’m Grace.</h2>
+
 						<p>
-							By day, I work in data science, but I’ve always needed a creative corner of my life — somewhere for paper scraps, plants, mosaics, handwritten notes, old-fashioned details, and whatever little idea I can’t stop thinking about.
+							By day, I work in data science, but I’ve always needed a creative
+							corner of my life — somewhere for paper scraps, plants, mosaics,
+							handwritten notes, old-fashioned details, and whatever little idea
+							I can’t stop thinking about.
 						</p>
+
 						<p>
-							The Thank You Co. grew out of that love for making things that feel personal. Not perfect. Not mass-produced. Just thoughtful, useful, beautiful little things made slowly and with a lot of care.
+							The Thank You Co. grew out of that love for making things that feel
+							personal. Not perfect. Not mass-produced. Just thoughtful, useful,
+							beautiful little things made slowly and with a lot of care.
 						</p>
+
 						<p>
-							You’ll find a bit of everything here as the studio grows: handmade cards, paper goods, plant-inspired pieces, mosaics, seasonal creations, and probably a few experiments along the way. I like to think of it less as a traditional shop and more as my little studio — a place where I can make something simply because it delighted me, and hopefully pass a little of that delight on to you.
+							You’ll find a bit of everything here as the studio grows: handmade
+							cards, paper goods, plant-inspired pieces, mosaics, seasonal creations,
+							and probably a few experiments along the way. I like to think of it
+							less as a traditional shop and more as my little studio — a place where
+							I can make something simply because it delighted me, and hopefully
+							pass a little of that delight on to you.
 						</p>
+
 						<p>
 							I’m so glad you found your way here.
 						</p>
-						<p>
-							- Grace
+
+						<p class="grace-signature">
+							— Grace
 						</p>
+
 						<div class="mini-rule"></div>
+
 						<p class="soft-note">
 							There will probably be flowers on the table. There will almost certainly
 							be a cat nearby.
@@ -176,32 +233,54 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 			</section>
 
+			<!-- SHOP -->
 			<section class="shop section" id="shop">
 				<div class="shell shop-grid">
 					<div class="shop-copy">
 						<p class="section-label">SHOP THE STUDIO</p>
+
 						<h2>See what’s on the worktable.</h2>
+
 						<p>
 							The shop changes as the studio does. Some pieces come back,
 							some exist only once, and some are simply experiments that became favorites.
 						</p>
+
 						<!-- Replace # with your Etsy shop URL -->
-						<a class="shop-link" href="#">VISIT THE SHOP <span>↗</span></a>
+						<a class="shop-link" href="#">
+							VISIT THE SHOP <span>↗</span>
+						</a>
 					</div>
 
 					<div class="shop-note-card">
 						<p class="smallcaps">SMALL BATCHES</p>
-						<p class="shop-script">made with care,<br />never rushed.</p>
-						<p class="heart-row">♡ &nbsp; ✿ &nbsp; ♡</p>
+
+						<p class="shop-script">
+							made with care,<br />
+							never rushed.
+						</p>
+
+						<p class="heart-row">
+							♡ &nbsp; ✿ &nbsp; ♡
+						</p>
 					</div>
 				</div>
 			</section>
 
+			<!-- CLOSING -->
 			<section class="closing">
 				<div class="shell closing-inner">
-					<p class="closing-kicker">THE THANK YOU CO.</p>
-					<h2>a little studio of handmade things</h2>
-					<p class="closing-note">thank you for stopping by ♡</p>
+					<p class="closing-kicker">
+						THE THANK YOU CO.
+					</p>
+
+					<h2>
+						a little studio of handmade things
+					</h2>
+
+					<p class="closing-note">
+						thank you for stopping by ♡
+					</p>
 				</div>
 			</section>
 		</main>
@@ -225,7 +304,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		--shell: min(1180px, calc(100% - 42px));
 	}
 
-	* { box-sizing: border-box; }
+	* {
+		box-sizing: border-box;
+	}
 
 	html {
 		scroll-behavior: smooth;
@@ -277,11 +358,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: var(--olive);
 	}
 
-	h1, h2, h3 {
+	h1,
+	h2,
+	h3 {
 		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-weight: 500;
 		letter-spacing: -0.02em;
 	}
+
+	/* HERO */
 
 	.hero {
 		position: relative;
@@ -305,8 +390,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		position: absolute;
 		inset: 0;
 		background:
-			linear-gradient(90deg, rgba(247,243,234,.82) 0%, rgba(247,243,234,.54) 42%, rgba(247,243,234,.24) 100%),
-			linear-gradient(180deg, rgba(255,255,255,.08), rgba(245,240,230,.28));
+			linear-gradient(
+				90deg,
+				rgba(247, 243, 234, 0.82) 0%,
+				rgba(247, 243, 234, 0.54) 42%,
+				rgba(247, 243, 234, 0.24) 100%
+			),
+			linear-gradient(
+				180deg,
+				rgba(255, 255, 255, 0.08),
+				rgba(245, 240, 230, 0.28)
+			);
 	}
 
 	.hero-content {
@@ -336,7 +430,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-size: 1.45rem;
 		line-height: 1.55;
-		color: rgba(53,54,41,.78);
+		color: rgba(53, 54, 41, 0.78);
 	}
 
 	.quiet-link {
@@ -345,9 +439,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		align-items: center;
 		margin-top: 34px;
 		text-decoration: none;
-		font-size: .73rem;
+		font-size: 0.73rem;
 		font-weight: 600;
-		letter-spacing: .18em;
+		letter-spacing: 0.18em;
 		text-transform: uppercase;
 		border-bottom: 1px solid var(--olive);
 		padding-bottom: 6px;
@@ -355,12 +449,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.quiet-link span {
 		font-size: 1rem;
-		transition: transform .2s ease;
+		transition: transform 0.2s ease;
 	}
 
 	.quiet-link:hover span {
 		transform: translateX(4px);
 	}
+
+	/* INTRO */
 
 	.intro {
 		background: var(--paper);
@@ -368,7 +464,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.intro-grid {
 		display: grid;
-		grid-template-columns: .85fr 1.15fr;
+		grid-template-columns: 0.85fr 1.15fr;
 		gap: 90px;
 		align-items: center;
 	}
@@ -381,7 +477,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.intro-mark img {
 		width: 100%;
 		border-radius: 50%;
-		box-shadow: 0 24px 70px rgba(82,72,48,.08);
+		box-shadow: 0 24px 70px rgba(82, 72, 48, 0.08);
 	}
 
 	.intro-copy h2,
@@ -390,14 +486,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.shop-copy h2 {
 		margin: 0 0 24px;
 		font-size: clamp(3.3rem, 5.6vw, 5.6rem);
-		line-height: .95;
+		line-height: 0.95;
 		color: var(--olive);
 	}
 
 	.intro-copy p:not(.section-label):not(.script-note),
 	.maker-copy p:not(.section-label):not(.soft-note),
 	.shop-copy p:not(.section-label) {
-		color: rgba(53,54,41,.72);
+		color: rgba(53, 54, 41, 0.72);
 		max-width: 690px;
 	}
 
@@ -409,6 +505,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: var(--terracotta);
 	}
 
+	/* STUDIO */
+
 	.studio {
 		background: var(--ivory);
 		border-top: 1px solid var(--line);
@@ -417,14 +515,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.section-heading {
 		display: grid;
-		grid-template-columns: 1fr .7fr;
+		grid-template-columns: 1fr 0.7fr;
 		gap: 70px;
 		align-items: end;
 		margin-bottom: 54px;
 	}
 
 	.section-sidecopy {
-		color: rgba(53,54,41,.65);
+		color: rgba(53, 54, 41, 0.65);
 		max-width: 450px;
 		margin: 0 0 7px;
 	}
@@ -440,11 +538,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		padding-top: 16px;
 	}
 
-	.category-image {
+	.category-photo-wrap {
 		height: 360px;
-		position: relative;
 		overflow: hidden;
 		background: #eee5d8;
+	}
+
+	.category-photo {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition:
+			transform 0.5s ease,
+			filter 0.5s ease;
+	}
+
+	.category:hover .category-photo {
+		transform: scale(1.025);
 	}
 
 	.category-copy {
@@ -453,8 +563,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.category-copy .number {
 		margin: 0 0 6px;
-		font-size: .68rem;
-		letter-spacing: .16em;
+		font-size: 0.68rem;
+		letter-spacing: 0.16em;
 		color: var(--sage);
 	}
 
@@ -465,117 +575,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 
 	.category-copy p:last-child {
-		color: rgba(53,54,41,.68);
+		color: rgba(53, 54, 41, 0.68);
 		margin-bottom: 0;
 	}
 
-	.paper-goods {
-		background: #e8ddcb;
-		display: grid;
-		place-items: center;
-	}
-
-	.paper-card {
-		position: absolute;
-		width: 62%;
-		height: 48%;
-		border: 1px solid rgba(85,82,58,.34);
-		background: #f8f3ea;
-		box-shadow: 9px 10px 25px rgba(82,72,48,.08);
-	}
-
-	.card-one {
-		z-index: 3;
-		display: grid;
-		place-items: center;
-		transform: rotate(-2deg);
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 2.3rem;
-		font-style: italic;
-		color: var(--olive);
-	}
-
-	.card-two {
-		transform: rotate(6deg) translate(18px, -6px);
-		background: #d8b7a7;
-	}
-
-	.card-three {
-		transform: rotate(-8deg) translate(-18px, 7px);
-		background: #c9c8a8;
-	}
-
-	.tiny-daisy {
-		position: absolute;
-		right: 14%;
-		bottom: 12%;
-		z-index: 5;
-		color: #a27645;
-		font-size: 2.3rem;
-	}
-
-	.mosaic-goods {
-		background: #d4c9ae;
-		display: grid;
-		place-items: center;
-	}
-
-	.mosaic-grid {
-		display: grid;
-		grid-template-columns: repeat(4, 52px);
-		gap: 8px;
-		transform: rotate(-2deg);
-	}
-
-	.mosaic-grid span {
-		aspect-ratio: 1;
-		border: 3px solid #efe8dc;
-		border-radius: 5px;
-	}
-
-	.mosaic-grid span:nth-child(4n+1) { background: #b77b5d; }
-	.mosaic-grid span:nth-child(4n+2) { background: #879073; }
-	.mosaic-grid span:nth-child(4n+3) { background: #d0a999; }
-	.mosaic-grid span:nth-child(4n+4) { background: #b6a178; }
-
-	.botanical-goods {
-		background: #dedcc8;
-	}
-
-	.stem {
-		position: absolute;
-		width: 5px;
-		height: 210px;
-		left: 50%;
-		top: 90px;
-		background: var(--olive);
-		transform: translateX(-50%) rotate(16deg);
-		border-radius: 5px;
-	}
-
-	.leaf {
-		position: absolute;
-		width: 80px;
-		height: 38px;
-		background: #8d9274;
-		border: 2px solid var(--olive);
-		border-radius: 80px 8px 80px 8px;
-	}
-
-	.l1 { left: 37%; top: 145px; transform: rotate(22deg); }
-	.l2 { left: 51%; top: 180px; transform: rotate(158deg); }
-	.l3 { left: 32%; top: 230px; transform: rotate(12deg); }
-	.l4 { left: 49%; top: 265px; transform: rotate(164deg); }
-
-	.flower {
-		position: absolute;
-		left: 45%;
-		top: 53px;
-		font-size: 5.7rem;
-		color: #b88f55;
-		line-height: 1;
-		transform: translateX(-50%);
-	}
+	/* MAKER */
 
 	.maker {
 		background: var(--paper);
@@ -583,7 +587,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.maker-grid {
 		display: grid;
-		grid-template-columns: .82fr 1.18fr;
+		grid-template-columns: 0.82fr 1.18fr;
 		gap: 90px;
 		align-items: center;
 	}
@@ -598,9 +602,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		aspect-ratio: 4 / 5;
 		object-fit: cover;
 		object-position: center top;
-		filter: saturate(.82) contrast(.96);
+		filter: saturate(0.82) contrast(0.96);
 	}
 
+	.grace-signature {
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		font-style: italic;
+		font-size: 1.4rem;
+		color: var(--olive) !important;
+	}
 
 	.mini-rule {
 		width: 62px;
@@ -618,13 +628,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		max-width: 520px;
 	}
 
+	/* SHOP */
+
 	.shop {
 		background: #e2d9c8;
 	}
 
 	.shop-grid {
 		display: grid;
-		grid-template-columns: 1.2fr .8fr;
+		grid-template-columns: 1.2fr 0.8fr;
 		gap: 90px;
 		align-items: center;
 	}
@@ -634,19 +646,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		gap: 12px;
 		align-items: center;
 		margin-top: 18px;
-		font-size: .76rem;
+		font-size: 0.76rem;
 		font-weight: 600;
-		letter-spacing: .19em;
+		letter-spacing: 0.19em;
 		text-decoration: none;
 		border-bottom: 1px solid var(--olive);
 		padding-bottom: 7px;
 	}
 
+	.shop-link span {
+		transition: transform 0.2s ease;
+	}
+
+	.shop-link:hover span {
+		transform: translate(3px, -2px);
+	}
+
 	.shop-note-card {
-		border: 1px solid rgba(85,82,58,.38);
+		border: 1px solid rgba(85, 82, 58, 0.38);
 		padding: 58px 48px;
 		text-align: center;
-		background: rgba(251,248,241,.35);
+		background: rgba(251, 248, 241, 0.35);
 	}
 
 	.shop-script {
@@ -654,14 +674,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-style: italic;
 		font-size: 3rem;
-		line-height: .95;
+		line-height: 0.95;
 		color: var(--olive);
 	}
 
 	.heart-row {
 		color: var(--terracotta);
-		letter-spacing: .18em;
+		letter-spacing: 0.18em;
 	}
+
+	/* CLOSING */
 
 	.closing {
 		padding: 110px 0 120px;
@@ -677,7 +699,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.closing h2 {
 		margin: 0;
 		font-size: clamp(3.8rem, 7vw, 7rem);
-		line-height: .88;
+		line-height: 0.88;
 		font-weight: 400;
 		font-style: italic;
 		color: var(--olive);
@@ -689,6 +711,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-size: 1.2rem;
 		color: var(--terracotta);
 	}
+
+	/* TABLET */
 
 	@media (max-width: 900px) {
 		.hero {
@@ -712,18 +736,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			gap: 54px;
 		}
 
-		.category-image {
-			height: 420px;
+		.category-photo-wrap {
+			height: 520px;
 		}
 
 		.maker-photo-wrap {
 			margin: 0 auto;
 		}
-
-		.maker-caption {
-			right: 12px;
-		}
 	}
+
+	/* MOBILE */
 
 	@media (max-width: 640px) {
 		:root {
@@ -741,7 +763,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		.hero-wash {
 			background:
-				linear-gradient(0deg, rgba(247,243,234,.92) 0%, rgba(247,243,234,.76) 47%, rgba(247,243,234,.26) 100%);
+				linear-gradient(
+					0deg,
+					rgba(247, 243, 234, 0.92) 0%,
+					rgba(247, 243, 234, 0.76) 47%,
+					rgba(247, 243, 234, 0.26) 100%
+				);
 		}
 
 		.hero-content {
@@ -756,14 +783,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			font-size: 1.25rem;
 		}
 
-		.category-image {
-			height: 340px;
-		}
-
-		.maker-caption {
-			position: static;
-			margin-top: 10px;
-			text-align: center;
+		.category-photo-wrap {
+			height: 390px;
 		}
 
 		.shop-note-card {
