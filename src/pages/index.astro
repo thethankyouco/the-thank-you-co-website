@@ -9,42 +9,378 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style>
+			:root {
+				--cream: #f7f0e5;
+				--paper: #fffaf2;
+				--ink: #25312f;
+				--teal: #207a76;
+				--light-teal: #7fd9cb;
+				--coral: #f25a3d;
+				--pink: #ff918a;
+				--yellow: #f0ce5b;
+			}
+
+			body {
+				margin: 0;
+				background: var(--cream);
+				color: var(--ink);
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			main {
+				width: 100%;
+			}
+
+			.hero {
+				min-height: 78vh;
+				display: grid;
+				place-items: center;
+				text-align: center;
+				padding: 5rem 1.5rem;
+			}
+
+			.hero-inner {
+				max-width: 850px;
+			}
+
+			.eyebrow {
+				text-transform: uppercase;
+				letter-spacing: 0.18em;
+				font-size: 0.8rem;
+				color: var(--teal);
+				font-weight: 700;
+			}
+
+			h1,
+			h2,
+			h3 {
+				font-family: Georgia, 'Times New Roman', serif;
+				font-weight: 400;
+			}
+
+			h1 {
+				font-size: clamp(4rem, 10vw, 8rem);
+				line-height: 0.95;
+				margin: 1rem 0 1.5rem;
+			}
+
+			h1 em {
+				color: var(--coral);
+				font-weight: 400;
+			}
+
+			.hero p {
+				font-size: 1.15rem;
+				line-height: 1.7;
+				max-width: 650px;
+				margin: 0 auto;
+			}
+
+			.actions {
+				margin-top: 2rem;
+				display: flex;
+				justify-content: center;
+				gap: 1rem;
+				flex-wrap: wrap;
+			}
+
+			.button {
+				display: inline-block;
+				padding: 1rem 1.5rem;
+				border-radius: 999px;
+				text-decoration: none;
+				font-size: 0.8rem;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+
+			.primary {
+				background: var(--coral);
+				color: white;
+			}
+
+			.secondary {
+				border: 1px solid var(--ink);
+				color: var(--ink);
+			}
+
+			.divider {
+				background: var(--teal);
+				color: var(--cream);
+				text-align: center;
+				padding: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.16em;
+				font-size: 0.75rem;
+			}
+
+			section {
+				padding: 6rem 1.5rem;
+			}
+
+			.container {
+				max-width: 1100px;
+				margin: 0 auto;
+			}
+
+			.about {
+				display: grid;
+				grid-template-columns: 1.2fr 0.8fr;
+				gap: 4rem;
+				align-items: center;
+			}
+
+			.about h2,
+			.studio h2,
+			.shop h2 {
+				font-size: clamp(3rem, 7vw, 5.5rem);
+				line-height: 1;
+				margin-top: 0;
+			}
+
+			.about p,
+			.shop p {
+				font-size: 1.05rem;
+				line-height: 1.8;
+			}
+
+			.quote-card {
+				background: var(--teal);
+				color: var(--cream);
+				padding: 2.5rem;
+				border-radius: 2rem;
+			}
+
+			.quote-card p {
+				font-family: Georgia, 'Times New Roman', serif;
+				font-size: 2rem;
+				line-height: 1.3;
+				margin: 0;
+			}
+
+			.studio {
+				background: var(--paper);
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.5rem;
+				margin-top: 2.5rem;
+			}
+
+			.card {
+				border-radius: 1.5rem;
+				overflow: hidden;
+				border: 1px solid rgba(37, 49, 47, 0.15);
+				background: var(--cream);
+			}
+
+			.card-art {
+				height: 250px;
+				display: grid;
+				place-items: center;
+				font-size: 4rem;
+			}
+
+			.cards-art {
+				background: var(--pink);
+			}
+
+			.mosaic-art {
+				background: var(--yellow);
+			}
+
+			.plant-art {
+				background: var(--light-teal);
+			}
+
+			.card-copy {
+				padding: 1.5rem;
+			}
+
+			.card-copy h3 {
+				font-size: 2rem;
+				margin: 0 0 0.5rem;
+			}
+
+			.card-copy p {
+				line-height: 1.6;
+				margin-bottom: 0;
+			}
+
+			.shop {
+				background: var(--yellow);
+				text-align: center;
+			}
+
+			.shop p {
+				max-width: 650px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			.shop .button {
+				margin-top: 1.5rem;
+				background: var(--ink);
+				color: var(--cream);
+			}
+
+			.closing {
+				background: var(--teal);
+				color: var(--cream);
+				text-align: center;
+			}
+
+			.closing h2 {
+				font-size: clamp(3rem, 8vw, 6rem);
+				margin-bottom: 1rem;
+			}
+
+			.closing p {
+				font-size: 1.1rem;
+			}
+
+			@media (max-width: 800px) {
+				.about,
+				.grid {
+					grid-template-columns: 1fr;
+				}
+
+				.hero {
+					min-height: auto;
+					padding-top: 4rem;
+					padding-bottom: 4rem;
+				}
+			}
+		</style>
 	</head>
+
 	<body>
 		<Header />
+
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<div class="hero-inner">
+					<p class="eyebrow">small-batch • handmade • a little curious</p>
+
+					<h1>
+						Made by hand,<br />
+						<em>kept by heart.</em>
+					</h1>
+
+					<p>
+						Cards, mosaics, plants, paper goods, and curious little things made slowly,
+						playfully, and with a soft spot for the details.
+					</p>
+
+					<div class="actions">
+						<a class="button primary" href="#shop">Shop the studio</a>
+						<a class="button secondary" href="#about">Meet the studio</a>
+					</div>
+				</div>
+			</section>
+
+			<div class="divider">
+				♡ handmade cards &nbsp;&nbsp; ♡ mosaics &nbsp;&nbsp; ♡ plants & propagations
+				&nbsp;&nbsp; ♡ seasonal oddities
+			</div>
+
+			<section id="about">
+				<div class="container about">
+					<div>
+						<p class="eyebrow">About the studio</p>
+						<h2>A home for things made because they should exist.</h2>
+
+						<p>
+							The Thank You Co. is a little studio for handmade things — sentimental,
+							useful, colorful, and occasionally a little strange.
+						</p>
+
+						<p>
+							Everything is made in small batches with a little nostalgia, a little humor,
+							and absolutely no interest in feeling mass-produced.
+						</p>
+					</div>
+
+					<div class="quote-card">
+						<p>
+							“Useful is lovely.<br />
+							Sentimental is useful.<br />
+							Weird is welcome.”
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="studio">
+				<div class="container">
+					<p class="eyebrow">From the studio</p>
+					<h2>Things I make.</h2>
+
+					<div class="grid">
+						<article class="card">
+							<div class="card-art cards-art">💌</div>
+							<div class="card-copy">
+								<h3>Cards & paper</h3>
+								<p>
+									Handmade notes, seeded paper, seasonal cards, and the kind you keep
+									in a drawer for years.
+								</p>
+							</div>
+						</article>
+
+						<article class="card">
+							<div class="card-art mosaic-art">◫</div>
+							<div class="card-copy">
+								<h3>Mosaics & objects</h3>
+								<p>
+									Colorful little pieces for shelves, tables, gifts, and homes that
+									need something slightly unexpected.
+								</p>
+							</div>
+						</article>
+
+						<article class="card">
+							<div class="card-art plant-art">🌿</div>
+							<div class="card-copy">
+								<h3>Plants & propagations</h3>
+								<p>
+									Rooted cuttings, propagation pieces, botanical experiments, and
+									plantish little gifts.
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="shop" id="shop">
+				<div class="container">
+					<p class="eyebrow">Shop the studio</p>
+					<h2>Come see what’s on the worktable.</h2>
+
+					<p>
+						The shop changes with whatever I’m making that week. Some pieces come back.
+						Some absolutely do not.
+					</p>
+
+					<a class="button" href="#">
+						Visit the Etsy shop
+					</a>
+				</div>
+			</section>
+
+			<section class="closing">
+				<div class="container">
+					<h2>Thanks for stopping by.</h2>
+					<p>A little studio of handmade things ♡</p>
+				</div>
+			</section>
 		</main>
+
 		<Footer />
 	</body>
 </html>
