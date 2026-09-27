@@ -3,98 +3,115 @@ import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
-	<nav class="nav-wrap">
+<header class="site-header">
+	<nav class="nav-shell">
 		<a class="brand" href="/" aria-label={`${SITE_TITLE} home`}>
-			<span class="brand-main">{SITE_TITLE}</span>
+			<span class="brand-main">THE THANK YOU CO.</span>
 			<span class="brand-sub">a little studio of handmade things</span>
 		</a>
 
-		<div class="internal-links">
+		<div class="internal-links" aria-label="Primary navigation">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/#about">About</HeaderLink>
-			<HeaderLink href="/#shop">Shop</HeaderLink>
+			<a href="/#studio">Studio</a>
+			<a href="/#about">About</a>
+			<a href="/#shop">Shop</a>
 			<a href="mailto:hello@thethankyouco.com">Contact</a>
 		</div>
 	</nav>
 </header>
 
 <style>
-	header {
+	.site-header {
 		position: sticky;
 		top: 0;
 		z-index: 100;
-		background: rgba(247, 240, 229, 0.94);
-		backdrop-filter: blur(12px);
-		border-bottom: 1px solid rgba(37, 49, 47, 0.1);
+		background: rgba(245, 240, 230, .94);
+		backdrop-filter: blur(14px);
+		border-bottom: 1px solid rgba(85, 82, 58, .13);
 	}
 
-	.nav-wrap {
+	.nav-shell {
 		max-width: 1180px;
+		min-height: 90px;
 		margin: 0 auto;
-		padding: 1rem 1.5rem;
+		padding: 0 22px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 2rem;
+		gap: 36px;
 	}
 
 	.brand {
 		display: flex;
 		flex-direction: column;
-		text-decoration: none;
-		color: #25312f;
 		line-height: 1.1;
+		text-decoration: none;
+		color: #55523a;
 	}
 
 	.brand-main {
-		font-size: 0.85rem;
-		font-weight: 700;
-		letter-spacing: 0.22em;
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		font-size: 1.05rem;
+		font-weight: 600;
+		letter-spacing: .24em;
 	}
 
 	.brand-sub {
-		margin-top: 0.35rem;
-		font-family: Georgia, 'Times New Roman', serif;
+		margin-top: 6px;
+		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-style: italic;
-		font-size: 0.78rem;
-		color: rgba(37, 49, 47, 0.68);
+		font-size: .86rem;
+		letter-spacing: .08em;
+		color: rgba(85, 82, 58, .68);
 	}
 
 	.internal-links {
 		display: flex;
 		align-items: center;
-		gap: 1.5rem;
+		gap: 25px;
 	}
 
 	.internal-links :global(a),
 	.internal-links a {
-		padding: 0.5rem 0;
-		color: #25312f;
 		text-decoration: none;
+		color: #55523a;
+		font-family: 'Montserrat', sans-serif;
+		font-size: .68rem;
+		font-weight: 500;
 		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		font-size: 0.75rem;
-		font-weight: 600;
+		letter-spacing: .18em;
 		border-bottom: 1px solid transparent;
+		padding: 8px 0 6px;
 	}
 
 	.internal-links :global(a:hover),
 	.internal-links a:hover {
-		border-bottom-color: #f25a3d;
+		border-bottom-color: #77775a;
 	}
 
-	@media (max-width: 720px) {
-		.nav-wrap {
+	@media (max-width: 760px) {
+		.nav-shell {
+			min-height: auto;
+			padding-top: 16px;
+			padding-bottom: 14px;
 			flex-direction: column;
 			align-items: flex-start;
-			gap: 0.8rem;
+			gap: 12px;
 		}
 
 		.internal-links {
 			width: 100%;
-			gap: 1rem;
+			gap: 14px;
 			flex-wrap: wrap;
+		}
+
+		.internal-links :global(a),
+		.internal-links a {
+			font-size: .63rem;
+		}
+
+		.brand-main {
+			font-size: .9rem;
 		}
 	}
 </style>

@@ -2,103 +2,118 @@
 const today = new Date();
 ---
 
-<footer>
-	<div class="footer-inner">
-		<div class="footer-brand">
-			<p class="name">THE THANK YOU CO.</p>
-			<p class="tagline">a little studio of handmade things</p>
-		</div>
+<footer class="site-footer">
+	<div class="footer-shell">
+		<div class="footer-top">
+			<div>
+				<p class="footer-name">THE THANK YOU CO.</p>
+				<p class="footer-tagline">a little studio of handmade things</p>
+			</div>
 
-		<div class="footer-links">
-			<a href="/">Home</a>
-			<a href="/#about">About</a>
-			<a href="/#shop">Shop</a>
-			<a href="mailto:hello@thethankyouco.com">Email</a>
+			<nav class="footer-links" aria-label="Footer navigation">
+				<a href="/">Home</a>
+				<a href="/#studio">Studio</a>
+				<a href="/#about">About</a>
+				<a href="/#shop">Shop</a>
+				<a href="mailto:hello@thethankyouco.com">Email</a>
+			</nav>
 		</div>
 
 		<div class="footer-bottom">
 			<p>© {today.getFullYear()} The Thank You Co.</p>
-			<p class="heart">♡</p>
+			<p class="footer-heart">♡</p>
 		</div>
 	</div>
 </footer>
 
 <style>
-	footer {
-		background: #25312f;
-		color: #f7f0e5;
-		padding: 4rem 1.5rem 2rem;
+	.site-footer {
+		background: #55523a;
+		color: #f5f0e6;
+		padding: 58px 22px 28px;
 	}
 
-	.footer-inner {
+	.footer-shell {
 		max-width: 1180px;
 		margin: 0 auto;
 	}
 
-	.footer-brand {
-		text-align: center;
-		margin-bottom: 2rem;
+	.footer-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 50px;
+		padding-bottom: 38px;
 	}
 
-	.name {
+	.footer-name {
 		margin: 0;
-		font-size: 0.9rem;
-		font-weight: 700;
-		letter-spacing: 0.2em;
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: .24em;
 	}
 
-	.tagline {
-		margin: 0.5rem 0 0;
-		font-family: Georgia, 'Times New Roman', serif;
+	.footer-tagline {
+		margin: 8px 0 0;
+		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-style: italic;
-		color: rgba(247, 240, 229, 0.7);
+		font-size: 1rem;
+		letter-spacing: .06em;
+		color: rgba(245,240,230,.68);
 	}
 
 	.footer-links {
 		display: flex;
-		justify-content: center;
+		gap: 24px;
 		flex-wrap: wrap;
-		gap: 1.5rem;
-		margin-bottom: 2.5rem;
 	}
 
 	.footer-links a {
-		color: #f7f0e5;
+		color: rgba(245,240,230,.78);
 		text-decoration: none;
+		font-family: 'Montserrat', sans-serif;
+		font-size: .66rem;
 		text-transform: uppercase;
-		letter-spacing: 0.12em;
-		font-size: 0.75rem;
+		letter-spacing: .17em;
 	}
 
 	.footer-links a:hover {
-		color: #f0ce5b;
+		color: #fffaf1;
 	}
 
 	.footer-bottom {
-		border-top: 1px solid rgba(247, 240, 229, 0.16);
-		padding-top: 1.5rem;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: 1rem;
-		color: rgba(247, 240, 229, 0.6);
-		font-size: 0.78rem;
+		border-top: 1px solid rgba(245,240,230,.16);
+		padding-top: 22px;
+		font-size: .72rem;
+		letter-spacing: .06em;
+		color: rgba(245,240,230,.55);
 	}
 
 	.footer-bottom p {
 		margin: 0;
 	}
 
-	.heart {
-		color: #ff918a;
-		font-size: 1.25rem;
+	.footer-heart {
+		font-family: Georgia, serif;
+		font-size: 1.15rem;
+		color: #d6ad9c;
 	}
 
-	@media (max-width: 600px) {
-		.footer-bottom {
+	@media (max-width: 700px) {
+		.footer-top {
 			flex-direction: column;
-			justify-content: center;
-			text-align: center;
+		}
+
+		.footer-links {
+			gap: 16px;
+		}
+
+		.footer-bottom {
+			margin-top: 6px;
 		}
 	}
 </style>
