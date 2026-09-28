@@ -14,7 +14,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
 		<link
-			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
@@ -27,7 +27,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<section class="hero" aria-labelledby="hero-title">
 				<img
 					class="hero-image"
-					src="/images/mosaic_greenery.png"
+					src="/images/mosaic_greenery.jpeg"
 					alt="Colorful glass mosaic pieces surrounded by lush greenery."
 				/>
 
@@ -106,6 +106,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="category-copy">
 								<p class="number">01</p>
+
 								<h3>Paper goods</h3>
 
 								<p>
@@ -128,6 +129,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="category-copy">
 								<p class="number">02</p>
+
 								<h3>Mosaics</h3>
 
 								<p>
@@ -150,6 +152,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="category-copy">
 								<p class="number">03</p>
+
 								<h3>Botanical things</h3>
 
 								<p>
@@ -273,24 +276,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<!-- CLOSING -->
 			<section class="closing">
 				<div class="shell closing-inner">
+					<p class="closing-note">
+						thank you for stopping by ♡
+					</p>
+
 					<img
 						class="closing-logo"
 						src="/images/the-thank-you-co-logo.jpg"
 						alt="The Thank You Co."
 						loading="lazy"
 					/>
-
-					<p class="closing-kicker">
-						THE THANK YOU CO.
-					</p>
-
-					<h2>
-						a little studio of handmade things
-					</h2>
-
-					<p class="closing-note">
-						thank you for stopping by ♡
-					</p>
 				</div>
 			</section>
 		</main>
@@ -358,8 +353,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.section-label,
 	.eyebrow,
-	.smallcaps,
-	.closing-kicker {
+	.smallcaps {
 		margin: 0 0 18px;
 		font-size: 0.72rem;
 		font-weight: 600;
@@ -408,7 +402,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		max-width: 720px;
 	}
 
-	/* Paper panel */
+	/* warm paper panel */
 	.hero-content::before {
 		content: '';
 		position: absolute;
@@ -434,7 +428,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			inset 0 1px 0 rgba(255, 255, 255, 0.8);
 	}
 
-	/* Subtle paper grain */
+	/* subtle paper grain */
 	.hero-content::after {
 		content: '';
 		position: absolute;
@@ -444,6 +438,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		height: calc(100% - 110px);
 		transform: translateY(-50%);
 		z-index: -1;
+
 		border-radius: 10px;
 
 		background-image:
@@ -464,7 +459,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.hero .eyebrow {
 		color: var(--terracotta);
-		text-shadow: none;
 	}
 
 	.hero h1 {
@@ -474,7 +468,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: var(--olive);
 		font-style: italic;
 		font-weight: 400;
-		text-shadow: none;
 	}
 
 	.hero-copy {
@@ -484,7 +477,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-size: 1.45rem;
 		line-height: 1.55;
 		color: rgba(53, 54, 41, 0.74);
-		text-shadow: none;
 	}
 
 	.quiet-link {
@@ -500,7 +492,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: var(--olive);
 		border-bottom: 1px solid rgba(85, 82, 58, 0.65);
 		padding-bottom: 6px;
-		text-shadow: none;
 	}
 
 	.quiet-link span {
@@ -512,25 +503,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		transform: translateX(4px);
 	}
 
-	/* INTRO */
+	/* ABOUT */
 
 	.intro {
 		background: var(--paper);
+		padding-top: 140px;
 	}
 
 	.intro-simple {
-		max-width: 850px;
+		max-width: 900px;
 	}
 
 	.intro-copy {
 		max-width: 760px;
-	}
-
-	.intro-copy h2 {
-		margin: 0 0 24px;
-		font-size: clamp(3.3rem, 5.6vw, 5.6rem);
-		line-height: 0.95;
-		color: var(--olive);
 	}
 
 	.intro-copy h2,
@@ -601,9 +586,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		transition:
-			transform 0.5s ease,
-			filter 0.5s ease;
+		transition: transform 0.5s ease;
 	}
 
 	.category:hover .category-photo {
@@ -767,15 +750,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.collection-card-inner {
 		position: relative;
 		z-index: 3;
-
 		display: flex;
 		min-height: 210px;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
 		padding: 46px 50px 40px;
-
 		text-align: center;
 		border-radius: 16px;
 
@@ -794,38 +774,30 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.collection-kicker {
 		display: block;
 		margin-bottom: 13px;
-
 		font-family: 'Montserrat', sans-serif;
 		font-size: 0.62rem;
 		font-weight: 600;
-
 		letter-spacing: 0.26em;
 		text-transform: uppercase;
-
 		color: var(--terracotta);
 	}
 
 	.collection-title {
 		display: block;
-
 		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-size: clamp(3rem, 4.6vw, 4.35rem);
 		font-style: italic;
 		font-weight: 400;
 		line-height: 0.94;
-
 		color: var(--olive);
 	}
 
 	.collection-arrow {
 		display: inline-block;
 		margin-top: 18px;
-
 		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-size: 1.55rem;
-
 		color: var(--olive);
-
 		transition: transform 0.25s ease;
 	}
 
@@ -856,20 +828,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	/* CLOSING */
 
-
-
 	.closing {
 		position: relative;
 		overflow: hidden;
-
-		padding: 130px 0 140px;
-
+		padding: 135px 0 145px;
 		background: var(--ivory);
 		text-align: center;
 		border-top: 1px solid var(--line);
 	}
 
-	/* Full floral background */
 	.closing::before {
 		content: '';
 		position: absolute;
@@ -880,46 +847,42 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		background-position: center;
 		background-size: cover;
 
-		opacity: 0.72;
+		opacity: 0.85;
 
 		pointer-events: none;
 		z-index: 0;
 	}
 
-	/* Very light wash so the wording stays readable */
 	.closing::after {
 		content: '';
 		position: absolute;
 		inset: 0;
 
-		background: rgba(245, 240, 230, 0.24);
+		background: rgba(245, 240, 230, 0.18);
 
 		pointer-events: none;
 		z-index: 1;
 	}
 
-	.closing-kicker {
-		margin: 0 0 18px;
-		font-size: 0.76rem;
-		font-weight: 700;
-		letter-spacing: 0.24em;
-		text-transform: uppercase;
-		color: #474934;
+	.closing-inner {
+		position: relative;
+		z-index: 2;
+		max-width: 820px;
 
-		text-shadow:
-			0 1px 0 rgba(255, 255, 255, 0.75),
-			0 2px 8px rgba(245, 240, 230, 0.85);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
-	.closing h2 {
-		margin: 0;
+	.closing-note {
+		margin: 0 0 30px;
 
 		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: clamp(3.8rem, 7vw, 7rem);
-		line-height: 0.9;
-
+		font-size: clamp(2.3rem, 4vw, 3.6rem);
 		font-weight: 600;
 		font-style: italic;
+		line-height: 1;
 
 		color: #474934;
 
@@ -928,42 +891,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			0 3px 12px rgba(245, 240, 230, 0.95);
 	}
 
-	.closing-note {
-		margin: 28px 0 0;
-
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 1.3rem;
-		font-weight: 600;
-
-		color: #8f5943;
-
-		text-shadow:
-			0 1px 0 rgba(255, 255, 255, 0.9),
-			0 2px 8px rgba(245, 240, 230, 0.9);
-	}
-
-	.closing-inner {
-		position: relative;
-		z-index: 2;
-
-		max-width: 820px;
-	}
-
 	.closing-logo {
-		width: 92px;
-		height: 92px;
-		margin: 0 auto 28px;
+		width: 100px;
+		height: 100px;
+
 		object-fit: cover;
 		border-radius: 50%;
-		opacity: 0.55;
-		filter: saturate(0.75);
-	}
 
+		opacity: 0.72;
+		filter: saturate(0.8);
 
-
-
-	.closing-inner {
-		max-width: 820px;
+		box-shadow:
+			0 8px 24px rgba(53, 54, 41, 0.12);
 	}
 
 	/* TABLET */
@@ -973,16 +912,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			min-height: 650px;
 		}
 
-		.intro-grid,
 		.maker-grid,
 		.shop-grid,
 		.section-heading {
 			grid-template-columns: 1fr;
 			gap: 50px;
-		}
-
-		.intro-mark {
-			max-width: 390px;
 		}
 
 		.category-grid {
@@ -1015,6 +949,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			padding: 78px 0;
 		}
 
+		.intro {
+			padding-top: 100px;
+		}
+
 		.hero {
 			min-height: 610px;
 			align-items: end;
@@ -1036,8 +974,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			background:
 				linear-gradient(
 					180deg,
-						rgba(251, 248, 241, 0.97),
-						rgba(245, 238, 226, 0.96)
+					rgba(251, 248, 241, 0.97),
+					rgba(245, 238, 226, 0.96)
 				);
 		}
 
@@ -1070,6 +1008,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		.shop-note-card {
 			padding: 44px 24px;
+		}
+
+		.closing {
+			padding: 100px 0 110px;
+		}
+
+		.closing-note {
+			font-size: 2.3rem;
+		}
+
+		.closing-logo {
+			width: 88px;
+			height: 88px;
 		}
 	}
 </style>
