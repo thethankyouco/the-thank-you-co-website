@@ -52,14 +52,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 			<!-- ABOUT THE STUDIO -->
 			<section class="intro section" id="about">
-				<div class="shell intro-grid">
-					<div class="intro-mark">
-						<img
-							src="/images/the-thank-you-co-logo.jpg"
-							alt="The Thank You Co. — a little studio of handmade things"
-						/>
-					</div>
-
+				<div class="shell intro-simple">
 					<div class="intro-copy">
 						<p class="section-label">A LITTLE ABOUT THE STUDIO</p>
 
@@ -280,6 +273,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<!-- CLOSING -->
 			<section class="closing">
 				<div class="shell closing-inner">
+					<img
+						class="closing-logo"
+						src="/images/the-thank-you-co-logo.jpg"
+						alt="The Thank You Co."
+						loading="lazy"
+					/>
+
 					<p class="closing-kicker">
 						THE THANK YOU CO.
 					</p>
@@ -518,22 +518,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		background: var(--paper);
 	}
 
-	.intro-grid {
-		display: grid;
-		grid-template-columns: 0.85fr 1.15fr;
-		gap: 90px;
-		align-items: center;
+	.intro-simple {
+		max-width: 850px;
 	}
 
-	.intro-mark {
-		max-width: 480px;
-		justify-self: center;
+	.intro-copy {
+		max-width: 760px;
 	}
 
-	.intro-mark img {
-		width: 100%;
-		border-radius: 50%;
-		box-shadow: 0 24px 70px rgba(82, 72, 48, 0.08);
+	.intro-copy h2 {
+		margin: 0 0 24px;
+		font-size: clamp(3.3rem, 5.6vw, 5.6rem);
+		line-height: 0.95;
+		color: var(--olive);
 	}
 
 	.intro-copy h2,
@@ -864,6 +861,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		background: var(--ivory);
 		text-align: center;
 		border-top: 1px solid var(--line);
+	}
+
+	.closing-logo {
+		width: 92px;
+		height: 92px;
+		margin: 0 auto 28px;
+		object-fit: cover;
+		border-radius: 50%;
+		opacity: 0.55;
+		filter: saturate(0.75);
 	}
 
 	.closing-inner {
