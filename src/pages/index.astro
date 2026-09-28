@@ -120,7 +120,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 								<h3>Paper goods</h3>
 
 								<p>
-									Handmade plantable thank-you card sets, botanical seed paper, and paper goods meant to feel as lovely in your hand as they do to give.
+									Handmade plantable thank-you card sets, botanical seed paper,
+									and paper goods meant to feel as lovely in your hand as they do to give.
 								</p>
 							</div>
 						</article>
@@ -232,28 +233,90 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 			</section>
 
-			<!-- SHOP -->
+			<!-- COLLECTION / ETSY -->
 			<section class="shop section" id="shop">
 				<div class="shell shop-grid">
+
 					<div class="shop-copy">
-						<p class="section-label">SHOP THE STUDIO</p>
+						<p class="section-label">THE COLLECTION</p>
 
 						<h2>See what’s on the worktable.</h2>
 
 						<p>
-							The shop changes as the studio does. Some pieces come back,
+							The collection changes as the studio does. Some pieces come back,
 							some exist only once, and some are simply experiments that became favorites.
 						</p>
 
 						<a
-
-							class="shop-link"
+							class="mosaic-collection"
 							href="https://www.etsy.com/shop/TheThankYouCoStudio"
 							target="_blank"
 							rel="noopener noreferrer"
-							aria-label="Visit The Thank You Co. Etsy shop"
+							aria-label="View The Thank You Co. collection on Etsy"
 						>
-							VISIT THE ETSY SHOP <span aria-hidden="true">↗</span>
+							<span class="mosaic-tiles mosaic-tiles-top" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+
+							<span class="mosaic-tiles mosaic-tiles-bottom" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+
+							<span class="mosaic-side mosaic-side-left" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+
+							<span class="mosaic-side mosaic-side-right" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+
+							<span class="mosaic-content">
+								<span class="mosaic-kicker">
+									THE CURRENT COLLECTION
+								</span>
+
+								<span class="mosaic-title">
+									View the collection
+								</span>
+
+								<span class="mosaic-copy">
+									See the handmade pieces currently available from the studio.
+								</span>
+
+								<span class="mosaic-arrow" aria-hidden="true">
+									→
+								</span>
+							</span>
 						</a>
 					</div>
 
@@ -633,10 +696,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		max-width: 520px;
 	}
 
-	/* SHOP */
+	/* SHOP / COLLECTION */
 
 	.shop {
 		background: #e2d9c8;
+		overflow: hidden;
 	}
 
 	.shop-grid {
@@ -646,37 +710,286 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		align-items: center;
 	}
 
-	.shop-link {
-		display: inline-flex;
-		align-items: center;
-		gap: 12px;
-		margin-top: 22px;
-		padding: 14px 20px;
-		border: 1px solid var(--olive);
+	/*
+	 * GLASS MOSAIC COLLECTION CTA
+	 */
+
+	.mosaic-collection {
+		position: relative;
+		display: block;
+		width: min(100%, 590px);
+		margin-top: 36px;
+		padding: 19px;
+		border-radius: 30px;
 		text-decoration: none;
-		font-size: 0.74rem;
-		font-weight: 600;
-		letter-spacing: 0.18em;
-		color: var(--olive);
-		background: rgba(251, 248, 241, 0.45);
+		overflow: hidden;
+		background:
+			linear-gradient(
+				145deg,
+				#d2b692 0%,
+				#ead7bd 45%,
+				#c4a27b 100%
+			);
+		box-shadow:
+			0 17px 45px rgba(66, 53, 37, 0.13),
+			inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
 		transition:
-			background 0.2s ease,
-			color 0.2s ease,
-			transform 0.2s ease;
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
 	}
 
-	.shop-link span {
-		transition: transform 0.2s ease;
+	.mosaic-collection:hover {
+		transform: translateY(-5px);
+		box-shadow:
+			0 25px 60px rgba(66, 53, 37, 0.19),
+			inset 0 1px 0 rgba(255, 255, 255, 0.58);
 	}
 
-	.shop-link:hover {
-		background: var(--olive);
-		color: var(--paper);
-		transform: translateY(-2px);
+	.mosaic-content {
+		position: relative;
+		z-index: 5;
+		display: block;
+		min-height: 255px;
+		padding: 52px 50px 45px;
+		border-radius: 21px;
+		text-align: center;
+
+		background:
+			radial-gradient(
+				circle at 25% 20%,
+				rgba(255, 255, 255, 0.94),
+				transparent 24%
+			),
+			linear-gradient(
+				160deg,
+				#fffaf0,
+				#f7eddc
+			);
+
+		box-shadow:
+			inset 0 0 0 1px rgba(88, 68, 45, 0.12),
+			inset 0 7px 20px rgba(255, 255, 255, 0.42);
 	}
 
-	.shop-link:hover span {
-		transform: translate(3px, -2px);
+	.mosaic-kicker {
+		display: block;
+		margin-bottom: 12px;
+		font-size: 0.62rem;
+		font-weight: 600;
+		letter-spacing: 0.25em;
+		text-transform: uppercase;
+		color: var(--terracotta);
+	}
+
+	.mosaic-title {
+		display: block;
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		font-size: clamp(2.75rem, 4.3vw, 4rem);
+		font-weight: 400;
+		font-style: italic;
+		line-height: 0.95;
+		color: var(--olive);
+	}
+
+	.mosaic-copy {
+		display: block;
+		max-width: 380px;
+		margin: 17px auto 0;
+		font-size: 0.82rem;
+		line-height: 1.65;
+		color: rgba(53, 54, 41, 0.6);
+	}
+
+	.mosaic-arrow {
+		display: inline-block;
+		margin-top: 16px;
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		font-size: 1.7rem;
+		color: var(--olive);
+		transition: transform 0.25s ease;
+	}
+
+	.mosaic-collection:hover .mosaic-arrow {
+		transform: translateX(7px);
+	}
+
+	/*
+	 * TOP + BOTTOM GLASS TILES
+	 */
+
+	.mosaic-tiles {
+		position: absolute;
+		z-index: 8;
+		left: 21px;
+		right: 21px;
+		height: 18px;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 5px;
+		pointer-events: none;
+	}
+
+	.mosaic-tiles-top {
+		top: 10px;
+	}
+
+	.mosaic-tiles-bottom {
+		bottom: 10px;
+	}
+
+	.mosaic-tiles span,
+	.mosaic-side span {
+		position: relative;
+		display: block;
+		border-radius: 4px;
+		overflow: hidden;
+
+		background:
+			linear-gradient(
+				145deg,
+				rgba(255, 255, 255, 0.7),
+				rgba(255, 255, 255, 0.12) 45%,
+				rgba(0, 0, 0, 0.06)
+			),
+			var(--tile);
+
+		box-shadow:
+			inset 1px 1px 2px rgba(255, 255, 255, 0.65),
+			inset -1px -1px 2px rgba(52, 42, 31, 0.12),
+			0 1px 2px rgba(52, 42, 31, 0.16);
+	}
+
+	.mosaic-tiles span::after,
+	.mosaic-side span::after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 3px;
+		right: 3px;
+		height: 30%;
+		border-radius: inherit;
+		background: rgba(255, 255, 255, 0.28);
+		filter: blur(1px);
+	}
+
+	.mosaic-tiles span:nth-child(1) {
+		--tile: #4b817c;
+	}
+
+	.mosaic-tiles span:nth-child(2) {
+		--tile: #d79074;
+	}
+
+	.mosaic-tiles span:nth-child(3) {
+		--tile: #a7a574;
+	}
+
+	.mosaic-tiles span:nth-child(4) {
+		--tile: #d6a9a3;
+	}
+
+	.mosaic-tiles span:nth-child(5) {
+		--tile: #c17c55;
+	}
+
+	.mosaic-tiles span:nth-child(6) {
+		--tile: #708a69;
+	}
+
+	.mosaic-tiles span:nth-child(7) {
+		--tile: #efc38e;
+	}
+
+	.mosaic-tiles span:nth-child(8) {
+		--tile: #719da0;
+	}
+
+	.mosaic-tiles span:nth-child(9) {
+		--tile: #c18c93;
+	}
+
+	.mosaic-tiles span:nth-child(10) {
+		--tile: #8c715c;
+	}
+
+	.mosaic-tiles span:nth-child(11) {
+		--tile: #b6bb8d;
+	}
+
+	.mosaic-tiles span:nth-child(12) {
+		--tile: #cb805e;
+	}
+
+	/*
+	 * SIDE GLASS TILES
+	 */
+
+	.mosaic-side {
+		position: absolute;
+		z-index: 8;
+		top: 33px;
+		bottom: 33px;
+		width: 17px;
+		display: grid;
+		grid-template-rows: repeat(5, 1fr);
+		gap: 5px;
+		pointer-events: none;
+	}
+
+	.mosaic-side-left {
+		left: 10px;
+	}
+
+	.mosaic-side-right {
+		right: 10px;
+	}
+
+	.mosaic-side span:nth-child(1) {
+		--tile: #b97858;
+	}
+
+	.mosaic-side span:nth-child(2) {
+		--tile: #668e88;
+	}
+
+	.mosaic-side span:nth-child(3) {
+		--tile: #d8ac9e;
+	}
+
+	.mosaic-side span:nth-child(4) {
+		--tile: #879462;
+	}
+
+	.mosaic-side span:nth-child(5) {
+		--tile: #d09b65;
+	}
+
+	/*
+	 * Small handmade irregularities
+	 */
+
+	.mosaic-tiles-top span:nth-child(3),
+	.mosaic-tiles-bottom span:nth-child(8) {
+		transform: rotate(-3deg);
+	}
+
+	.mosaic-tiles-top span:nth-child(6),
+	.mosaic-tiles-bottom span:nth-child(2) {
+		transform: rotate(2deg);
+	}
+
+	.mosaic-tiles-top span:nth-child(10),
+	.mosaic-tiles-bottom span:nth-child(11) {
+		transform: rotate(-2deg);
+	}
+
+	.mosaic-side-left span:nth-child(3) {
+		transform: rotate(3deg);
+	}
+
+	.mosaic-side-right span:nth-child(2) {
+		transform: rotate(-3deg);
 	}
 
 	.shop-note-card {
@@ -760,6 +1073,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		.maker-photo-wrap {
 			margin: 0 auto;
 		}
+
+		.mosaic-collection {
+			max-width: 620px;
+		}
+
+		.shop-note-card {
+			max-width: 620px;
+		}
 	}
 
 	/* MOBILE */
@@ -802,6 +1123,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		.category-photo-wrap {
 			height: 390px;
+		}
+
+		.mosaic-collection {
+			padding: 16px;
+			border-radius: 25px;
+		}
+
+		.mosaic-content {
+			min-height: 235px;
+			padding: 43px 28px 36px;
+			border-radius: 17px;
+		}
+
+		.mosaic-title {
+			font-size: 2.75rem;
+		}
+
+		.mosaic-copy {
+			font-size: 0.76rem;
+		}
+
+		.mosaic-tiles {
+			left: 18px;
+			right: 18px;
+			height: 15px;
+			gap: 3px;
+		}
+
+		.mosaic-side {
+			width: 14px;
+			gap: 3px;
 		}
 
 		.shop-note-card {
