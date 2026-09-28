@@ -253,21 +253,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						>
 							<span class="collection-card-inner">
 								<span class="collection-kicker">
-									THE CURRENT COLLECTION
+									FRESH FROM THE STUDIO
 								</span>
 
 								<span class="collection-title">
-									View the collection
+									have a little look
 								</span>
 
-								<span class="collection-description">
-									Small-batch pieces and one-of-a-kind finds currently available
-									from the studio.
-								</span>
-
-								<span class="collection-action">
-									EXPLORE THE COLLECTION
-									<span aria-hidden="true">→</span>
+								<span class="collection-arrow" aria-hidden="true">
+									→
 								</span>
 							</span>
 						</a>
@@ -743,12 +737,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		z-index: 3;
 
 		display: flex;
-		min-height: 265px;
+		min-height: 210px;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 
-		padding: 52px 50px 46px;
+		padding: 46px 50px 40px;
 
 		text-align: center;
 
@@ -794,43 +788,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: var(--olive);
 	}
 
-	.collection-description {
-		display: block;
-		max-width: 390px;
-		margin-top: 19px;
+	.collection-arrow {
+		display: inline-block;
+		margin-top: 18px;
 
 		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 1.15rem;
-		line-height: 1.45;
-
-		color: rgba(53, 54, 41, 0.68);
-	}
-
-	.collection-action {
-		display: inline-flex;
-		align-items: center;
-		gap: 14px;
-
-		margin-top: 29px;
-		padding-bottom: 5px;
-
-		border-bottom: 1px solid rgba(85, 82, 58, 0.5);
-
-		font-family: 'Montserrat', sans-serif;
-		font-size: 0.64rem;
-		font-weight: 600;
-
-		letter-spacing: 0.19em;
+		font-size: 1.55rem;
 
 		color: var(--olive);
-	}
 
-	.collection-action span {
-		font-size: 1.05rem;
 		transition: transform 0.25s ease;
 	}
 
-	.collection-card:hover .collection-action span {
+	.collection-card:hover .collection-arrow {
 		transform: translateX(6px);
 	}
 
