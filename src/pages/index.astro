@@ -856,16 +856,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	/* CLOSING */
 
+
+
 	.closing {
 		position: relative;
 		overflow: hidden;
 
-		padding: 110px 0 120px;
+		padding: 130px 0 140px;
+
 		background: var(--ivory);
 		text-align: center;
 		border-top: 1px solid var(--line);
 	}
 
+	/* Full floral background */
 	.closing::before {
 		content: '';
 		position: absolute;
@@ -873,18 +877,31 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		background-image: url('/images/flowers.png');
 		background-repeat: no-repeat;
-		background-position: center bottom;
-		background-size: min(1100px, 95%);
+		background-position: center;
+		background-size: cover;
 
-		opacity: 0.16;
+		opacity: 0.72;
 
 		pointer-events: none;
 		z-index: 0;
 	}
 
+	/* Very light wash so the wording stays readable */
+	.closing::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+
+		background: rgba(245, 240, 230, 0.16);
+
+		pointer-events: none;
+		z-index: 1;
+	}
+
 	.closing-inner {
 		position: relative;
-		z-index: 1;
+		z-index: 2;
+
 		max-width: 820px;
 	}
 
