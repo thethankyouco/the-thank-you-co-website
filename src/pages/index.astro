@@ -31,8 +31,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					alt="A warm handmade studio table with plants, flowers, cards, mosaic pieces, scissors and craft supplies."
 				/>
 
-				<div class="hero-wash" aria-hidden="true"></div>
-
 				<div class="hero-content">
 					<p class="eyebrow">THE THANK YOU CO.</p>
 
@@ -401,22 +399,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		object-position: center;
 	}
 
-	.hero-wash {
-		position: absolute;
-		inset: 0;
-		background:
-			linear-gradient(
-				90deg,
-				rgba(247, 243, 234, 0.82) 0%,
-				rgba(247, 243, 234, 0.54) 42%,
-				rgba(247, 243, 234, 0.24) 100%
-			),
-			linear-gradient(
-				180deg,
-				rgba(255, 255, 255, 0.08),
-				rgba(245, 240, 230, 0.28)
-			);
-	}
 
 	.hero-content {
 		position: relative;
@@ -434,9 +416,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-size: clamp(4.8rem, 8.7vw, 8.6rem);
 		line-height: 0.86;
 		margin: 0;
-		color: var(--olive);
+		color: #fff8ec;
 		font-style: italic;
 		font-weight: 400;
+		text-shadow:
+			0 2px 10px rgba(29, 34, 20, 0.34),
+			0 1px 2px rgba(29, 34, 20, 0.35);
 	}
 
 	.hero-copy {
@@ -445,7 +430,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-size: 1.45rem;
 		line-height: 1.55;
-		color: rgba(53, 54, 41, 0.78);
+		color: rgba(255, 248, 236, 0.95);
+		text-shadow:
+			0 2px 8px rgba(29, 34, 20, 0.4),
+			0 1px 2px rgba(29, 34, 20, 0.32);
+	}
+
+	.hero .eyebrow {
+		color: #fff8ec;
+		text-shadow: 0 1px 5px rgba(29, 34, 20, 0.42);
 	}
 
 	.quiet-link {
@@ -458,8 +451,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-weight: 600;
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
-		border-bottom: 1px solid var(--olive);
+		color: #fff8ec;
+		border-bottom: 1px solid rgba(255, 248, 236, 0.9);
 		padding-bottom: 6px;
+		text-shadow: 0 1px 5px rgba(29, 34, 20, 0.4);
 	}
 
 	.quiet-link span {
@@ -908,15 +903,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			align-items: end;
 		}
 
-		.hero-wash {
-			background:
-				linear-gradient(
-					0deg,
-					rgba(247, 243, 234, 0.92) 0%,
-					rgba(247, 243, 234, 0.76) 47%,
-					rgba(247, 243, 234, 0.26) 100%
-				);
-		}
 
 		.hero-content {
 			padding: 70px 0 64px;
