@@ -28,7 +28,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<img
 					class="hero-image"
 					src="/images/mosaic_greenery.png"
-					alt="A warm handmade studio table with plants, flowers, cards, mosaic pieces, scissors and craft supplies."
+					alt="Colorful glass mosaic pieces surrounded by lush greenery."
 				/>
 
 				<div class="hero-content">
@@ -113,7 +113,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="category-copy">
 								<p class="number">01</p>
-
 								<h3>Paper goods</h3>
 
 								<p>
@@ -136,7 +135,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="category-copy">
 								<p class="number">02</p>
-
 								<h3>Mosaics</h3>
 
 								<p>
@@ -159,7 +157,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="category-copy">
 								<p class="number">03</p>
-
 								<h3>Botanical things</h3>
 
 								<p>
@@ -399,7 +396,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		object-position: center;
 	}
 
-
 	.hero-content {
 		position: relative;
 		z-index: 2;
@@ -412,6 +408,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		max-width: 720px;
 	}
 
+	/* Paper panel */
 	.hero-content::before {
 		content: '';
 		position: absolute;
@@ -422,24 +419,51 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		transform: translateY(-50%);
 		z-index: -1;
 
-		background: rgba(35, 39, 28, 0.58);
-		backdrop-filter: blur(7px);
-		-webkit-backdrop-filter: blur(7px);
+		background:
+			linear-gradient(
+				180deg,
+				rgba(251, 248, 241, 0.96),
+				rgba(245, 238, 226, 0.94)
+			);
 
-		border: 1px solid rgba(255, 255, 255, 0.14);
-		border-radius: 28px;
+		border: 1px solid rgba(85, 82, 58, 0.12);
+		border-radius: 10px;
 
 		box-shadow:
-			0 18px 50px rgba(20, 24, 16, 0.18),
-			inset 0 1px 0 rgba(255, 255, 255, 0.08);
+			0 14px 38px rgba(53, 54, 41, 0.13),
+			inset 0 1px 0 rgba(255, 255, 255, 0.8);
 	}
 
-	.hero-content > * {
-		max-width: 720px;
+	/* Subtle paper grain */
+	.hero-content::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: -34px;
+		width: min(760px, calc(100vw - 60px));
+		height: calc(100% - 110px);
+		transform: translateY(-50%);
+		z-index: -1;
+		border-radius: 10px;
+
+		background-image:
+			radial-gradient(
+				circle at 20% 30%,
+				rgba(85, 82, 58, 0.035) 0 1px,
+				transparent 1.3px
+			),
+			radial-gradient(
+				circle at 70% 60%,
+				rgba(185, 120, 88, 0.025) 0 1px,
+				transparent 1.4px
+			);
+
+		background-size: 18px 18px, 24px 24px;
+		pointer-events: none;
 	}
 
 	.hero .eyebrow {
-		color: #fff8ec;
+		color: var(--terracotta);
 		text-shadow: none;
 	}
 
@@ -447,7 +471,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-size: clamp(4.8rem, 8.7vw, 8.6rem);
 		line-height: 0.86;
 		margin: 0;
-		color: #fff8ec;
+		color: var(--olive);
 		font-style: italic;
 		font-weight: 400;
 		text-shadow: none;
@@ -459,7 +483,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-family: 'Cormorant Garamond', Georgia, serif;
 		font-size: 1.45rem;
 		line-height: 1.55;
-		color: rgba(255, 248, 236, 0.92);
+		color: rgba(53, 54, 41, 0.74);
 		text-shadow: none;
 	}
 
@@ -473,8 +497,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-weight: 600;
 		letter-spacing: 0.18em;
 		text-transform: uppercase;
-		color: #fff8ec;
-		border-bottom: 1px solid rgba(255, 248, 236, 0.82);
+		color: var(--olive);
+		border-bottom: 1px solid rgba(85, 82, 58, 0.65);
 		padding-bottom: 6px;
 		text-shadow: none;
 	}
@@ -674,10 +698,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		align-items: center;
 	}
 
-	/*
-	 * REAL MOSAIC IMAGE CTA
-	 */
-
 	.collection-card {
 		position: relative;
 		display: block;
@@ -685,7 +705,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		margin-top: 38px;
 		padding: 28px;
 		overflow: hidden;
-
 		text-decoration: none;
 		border-radius: 26px;
 
@@ -731,7 +750,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		position: absolute;
 		inset: 0;
 		z-index: 2;
-
 		border-radius: inherit;
 
 		box-shadow:
@@ -762,7 +780,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		padding: 46px 50px 40px;
 
 		text-align: center;
-
 		border-radius: 16px;
 
 		background:
@@ -771,8 +788,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				rgba(255, 251, 243, 0.97),
 				rgba(245, 236, 220, 0.96)
 			);
-
-		backdrop-filter: blur(2px);
 
 		box-shadow:
 			0 5px 20px rgba(54, 44, 32, 0.17),
@@ -910,17 +925,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 
 	/* MOBILE */
-	@media (max-width: 640px) {
-		.hero-content::before {
-			left: -14px;
-			width: calc(100% + 28px);
-			height: calc(100% - 60px);
-			border-radius: 22px;
-			background: rgba(35, 39, 28, 0.66);
-			backdrop-filter: blur(6px);
-			-webkit-backdrop-filter: blur(6px);
-		}
-	}
 
 	@media (max-width: 640px) {
 		:root {
@@ -936,9 +940,25 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			align-items: end;
 		}
 
-
 		.hero-content {
 			padding: 70px 0 64px;
+		}
+
+		.hero-content::before,
+		.hero-content::after {
+			left: -14px;
+			width: calc(100% + 28px);
+			height: calc(100% - 60px);
+			border-radius: 8px;
+		}
+
+		.hero-content::before {
+			background:
+				linear-gradient(
+					180deg,
+						rgba(251, 248, 241, 0.97),
+						rgba(245, 238, 226, 0.96)
+				);
 		}
 
 		.hero h1 {
@@ -959,22 +979,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		}
 
 		.collection-card-inner {
-			min-height: 235px;
-			padding: 42px 24px 38px;
+			min-height: 190px;
+			padding: 38px 24px 34px;
 			border-radius: 13px;
 		}
 
 		.collection-title {
 			font-size: 3rem;
-		}
-
-		.collection-description {
-			font-size: 1.04rem;
-		}
-
-		.collection-action {
-			font-size: 0.59rem;
-			letter-spacing: 0.15em;
 		}
 
 		.shop-note-card {
