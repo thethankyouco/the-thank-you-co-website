@@ -120,8 +120,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 								<h3>Paper goods</h3>
 
 								<p>
-									Handmade plantable thank you card sets, bloomable botantical seed paper, and pieces
-									meant to feel good in your hand.
+									Handmade plantable thank-you card sets, botanical seed paper, and paper goods meant to feel as lovely in your hand as they do to give.
 								</p>
 							</div>
 						</article>
@@ -649,19 +648,31 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.shop-link {
 		display: inline-flex;
-		gap: 12px;
 		align-items: center;
-		margin-top: 18px;
-		font-size: 0.76rem;
-		font-weight: 600;
-		letter-spacing: 0.19em;
+		gap: 12px;
+		margin-top: 22px;
+		padding: 14px 20px;
+		border: 1px solid var(--olive);
 		text-decoration: none;
-		border-bottom: 1px solid var(--olive);
-		padding-bottom: 7px;
+		font-size: 0.74rem;
+		font-weight: 600;
+		letter-spacing: 0.18em;
+		color: var(--olive);
+		background: rgba(251, 248, 241, 0.45);
+		transition:
+			background 0.2s ease,
+			color 0.2s ease,
+			transform 0.2s ease;
 	}
 
 	.shop-link span {
 		transition: transform 0.2s ease;
+	}
+
+	.shop-link:hover {
+		background: var(--olive);
+		color: var(--paper);
+		transform: translateY(-2px);
 	}
 
 	.shop-link:hover span {
