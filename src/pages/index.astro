@@ -857,10 +857,35 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	/* CLOSING */
 
 	.closing {
+		position: relative;
+		overflow: hidden;
+
 		padding: 110px 0 120px;
 		background: var(--ivory);
 		text-align: center;
 		border-top: 1px solid var(--line);
+	}
+
+	.closing::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+
+		background-image: url('/images/flowers.png');
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: min(1100px, 95%);
+
+		opacity: 0.16;
+
+		pointer-events: none;
+		z-index: 0;
+	}
+
+	.closing-inner {
+		position: relative;
+		z-index: 1;
+		max-width: 820px;
 	}
 
 	.closing-logo {
