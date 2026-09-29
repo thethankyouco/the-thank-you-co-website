@@ -32,9 +32,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				/>
 
 				<div class="hero-content">
-					<p class="eyebrow">THE THANK YOU CO.</p>
 
+					<p class="eyebrow">THE THANK YOU CO.</p>
 					<h1 id="hero-title">
+						<span class="visually-hidden">The Thank You Co. — </span>
 						a little studio<br />
 						of handmade things
 					</h1>
@@ -110,8 +111,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 								<h3>Paper goods</h3>
 
 								<p>
-									Handmade plantable thank-you card sets, botanical seed paper,
-									and paper goods meant to feel as lovely in your hand as they do to give.
+									Handmade plantable thank-you cards, botanical seed paper,
+									handmade greeting cards, and small-batch paper goods meant to feel
+									as lovely in your hand as they do to give.
 								</p>
 							</div>
 						</article>
@@ -133,8 +135,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 								<h3>Mosaics</h3>
 
 								<p>
-									Small decorative pieces, candle dishes, trays, and colorful
-									objects with an intentionally handmade rhythm.
+									Handmade glass mosaic candle dishes, decorative trays, trinket dishes,
+									and colorful small-batch home decor with an intentionally handmade rhythm.
 								</p>
 							</div>
 						</article>
@@ -351,6 +353,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.section {
 		padding: 110px 0;
+	}
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
 	}
 
 	.section-label,
