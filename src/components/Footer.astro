@@ -5,9 +5,42 @@ const today = new Date();
 <footer class="site-footer">
 	<div class="footer-shell">
 		<div class="footer-top">
-			<div>
+			<div class="footer-brand">
 				<p class="footer-name">THE THANK YOU CO.</p>
 				<p class="footer-tagline">a little studio of handmade things</p>
+
+				<div class="social-area">
+					<p class="social-label">FOLLOW ALONG</p>
+
+					<div class="social-links">
+						<a
+							href="https://www.facebook.com/TheThankYouCoStudio"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="The Thank You Co. on Facebook"
+						>
+							Facebook
+						</a>
+
+						<a
+							href="https://www.instagram.com/thethankyoucostudio"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="The Thank You Co. on Instagram"
+						>
+							Instagram
+						</a>
+
+						<a
+							href="https://www.pinterest.com/TheThankYouCoStudio"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="The Thank You Co. on Pinterest"
+						>
+							Pinterest
+						</a>
+					</div>
+				</div>
 			</div>
 
 			<nav class="footer-links" aria-label="Footer navigation">
@@ -46,6 +79,10 @@ const today = new Date();
 		padding-bottom: 38px;
 	}
 
+	.footer-brand {
+		max-width: 520px;
+	}
+
 	.footer-name {
 		margin: 0;
 		font-family: 'Cormorant Garamond', Georgia, serif;
@@ -60,7 +97,47 @@ const today = new Date();
 		font-style: italic;
 		font-size: 1rem;
 		letter-spacing: .06em;
-		color: rgba(245,240,230,.68);
+		color: rgba(245, 240, 230, .68);
+	}
+
+	.social-area {
+		margin-top: 28px;
+	}
+
+	.social-label {
+		margin: 0 0 10px;
+		font-family: 'Montserrat', sans-serif;
+		font-size: .62rem;
+		font-weight: 600;
+		letter-spacing: .22em;
+		text-transform: uppercase;
+		color: rgba(245, 240, 230, .62);
+	}
+
+	.social-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 18px;
+	}
+
+	.social-links a {
+		color: rgba(245, 240, 230, .82);
+		text-decoration: none;
+		font-family: 'Montserrat', sans-serif;
+		font-size: .67rem;
+		font-weight: 600;
+		letter-spacing: .14em;
+		text-transform: uppercase;
+		border-bottom: 1px solid transparent;
+		padding-bottom: 3px;
+		transition:
+			color .2s ease,
+			border-color .2s ease;
+	}
+
+	.social-links a:hover {
+		color: #fffaf1;
+		border-color: #d6ad9c;
 	}
 
 	.footer-links {
@@ -70,7 +147,7 @@ const today = new Date();
 	}
 
 	.footer-links a {
-		color: rgba(245,240,230,.78);
+		color: rgba(245, 240, 230, .78);
 		text-decoration: none;
 		font-family: 'Montserrat', sans-serif;
 		font-size: .66rem;
@@ -86,11 +163,11 @@ const today = new Date();
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-top: 1px solid rgba(245,240,230,.16);
+		border-top: 1px solid rgba(245, 240, 230, .16);
 		padding-top: 22px;
 		font-size: .72rem;
 		letter-spacing: .06em;
-		color: rgba(245,240,230,.55);
+		color: rgba(245, 240, 230, .55);
 	}
 
 	.footer-bottom p {
@@ -110,6 +187,10 @@ const today = new Date();
 
 		.footer-links {
 			gap: 16px;
+		}
+
+		.social-links {
+			gap: 14px;
 		}
 
 		.footer-bottom {
