@@ -1,0 +1,239 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title =
+	'Handmade Glass Mosaics | Candle Dishes, Trays & Decor | The Thank You Co.';
+
+const description =
+	'Shop handmade glass mosaic candle dishes, trinket dishes, decorative trays, and colorful small-batch mosaic home decor from The Thank You Co.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+		<Header />
+
+		<main>
+			<section class="mosaic-hero">
+				<div class="shell">
+					<p class="eyebrow">HANDMADE MOSAICS</p>
+
+					<h1>Little pieces of glass, made into something worth keeping.</h1>
+
+					<p class="intro">
+						Explore handmade glass mosaic candle dishes, trinket dishes,
+						decorative trays, and small-batch home decor made slowly
+						in The Thank You Co. studio.
+					</p>
+
+					<a
+						class="shop-link"
+						href="https://www.etsy.com/shop/TheThankYouCoStudio"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						shop the mosaic collection →
+					</a>
+				</div>
+			</section>
+
+			<section class="mosaic-content">
+				<div class="shell grid">
+					<div>
+						<img
+							src="/images/mosaics.png"
+							alt="Handmade glass mosaic candle dishes and decorative trays from The Thank You Co."
+						/>
+					</div>
+
+					<div class="copy">
+						<p class="eyebrow">FROM THE WORKTABLE</p>
+
+						<h2>Handmade glass mosaic decor</h2>
+
+						<p>
+							Each mosaic piece is assembled by hand using colorful glass,
+							floral details, and small decorative elements chosen for texture,
+							shape, and character.
+						</p>
+
+						<p>
+							The collection includes mosaic candle dishes, trinket dishes,
+							decorative trays, and one-of-a-kind pieces designed to bring a
+							little color and personality into everyday spaces.
+						</p>
+
+						<p>
+							Because everything is handmade in small batches, no two pieces
+							are exactly alike.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="details">
+				<div class="shell">
+					<h2>Made for little corners of the home</h2>
+
+					<div class="detail-grid">
+						<article>
+							<h3>Mosaic candle dishes</h3>
+							<p>
+								Handmade glass mosaic plates designed to sit beneath candles
+								and add color, texture, and charm to shelves and tables.
+							</p>
+						</article>
+
+						<article>
+							<h3>Trinket dishes</h3>
+							<p>
+								Small mosaic dishes for rings, jewelry, keys, and the little
+								things that deserve a pretty place to land.
+							</p>
+						</article>
+
+						<article>
+							<h3>Decorative trays</h3>
+							<p>
+								Colorful handmade trays and decorative pieces created in small
+								batches for homes that like things a little less ordinary.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--ivory: #f5f0e6;
+		--paper: #fbf8f1;
+		--olive: #55523a;
+		--terracotta: #b97858;
+		--ink: #353629;
+		--shell: min(1180px, calc(100% - 42px));
+	}
+
+	body {
+		margin: 0;
+		background: var(--ivory);
+		color: var(--ink);
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.shell {
+		width: var(--shell);
+		margin: 0 auto;
+	}
+
+	.mosaic-hero {
+		padding: 140px 0 110px;
+		background: var(--paper);
+	}
+
+	.eyebrow {
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.24em;
+		text-transform: uppercase;
+		color: var(--terracotta);
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		color: var(--olive);
+	}
+
+	h1 {
+		max-width: 900px;
+		font-size: clamp(4rem, 7vw, 7rem);
+		line-height: 0.92;
+		font-weight: 400;
+		margin: 18px 0 26px;
+	}
+
+	.intro {
+		max-width: 720px;
+		font-size: 1.2rem;
+		line-height: 1.8;
+	}
+
+	.shop-link {
+		display: inline-block;
+		margin-top: 28px;
+		color: var(--olive);
+		text-decoration: none;
+		border-bottom: 1px solid var(--olive);
+		padding-bottom: 5px;
+	}
+
+	.mosaic-content {
+		padding: 110px 0;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 80px;
+		align-items: center;
+	}
+
+	.grid img {
+		width: 100%;
+		display: block;
+	}
+
+	.copy h2,
+	.details h2 {
+		font-size: clamp(3rem, 5vw, 5rem);
+		line-height: 1;
+		font-weight: 400;
+		margin: 12px 0 24px;
+	}
+
+	.copy p {
+		line-height: 1.8;
+		color: rgba(53, 54, 41, 0.75);
+	}
+
+	.details {
+		padding: 100px 0;
+		background: var(--paper);
+	}
+
+	.detail-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 36px;
+		margin-top: 48px;
+	}
+
+	.detail-grid h3 {
+		font-size: 2rem;
+		margin-bottom: 12px;
+	}
+
+	.detail-grid p {
+		line-height: 1.7;
+		color: rgba(53, 54, 41, 0.72);
+	}
+
+	@media (max-width: 800px) {
+		.grid,
+		.detail-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
