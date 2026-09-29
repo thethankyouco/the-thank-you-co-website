@@ -1,2 +1,5 @@
-export const SITE_TITLE = 'THE THANK YOU CO.';
-export const SITE_DESCRIPTION = 'A little studio of handmade things.';
+export const SITE_TITLE =
+	'The Thank You Co. | Handmade Mosaics, Paper Goods & Botanical Gifts';
+
+export const SITE_DESCRIPTION =
+	'The Thank You Co. is a little studio of handmade things featuring glass mosaics, plantable paper goods, botanical gifts, seasonal pieces, and small-batch handmade decor.';
