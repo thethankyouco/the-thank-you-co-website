@@ -1,0 +1,234 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const title =
+	'Botanical Gifts & Plant-Inspired Handmade Decor | The Thank You Co.';
+
+const description =
+	'Discover botanical gifts, plant-inspired handmade decor, propagations, and small-batch green pieces from The Thank You Co.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+		<Header />
+
+		<main>
+			<section class="page-hero">
+				<div class="shell">
+					<p class="eyebrow">BOTANICAL THINGS</p>
+
+					<h1>Little green things for quiet corners.</h1>
+
+					<p class="intro">
+						Explore botanical gifts, plant-inspired handmade decor,
+						propagations, natural textures, and small-batch pieces made
+						for plant lovers and cozy spaces.
+					</p>
+
+					<a
+						class="shop-link"
+						href="https://www.etsy.com/shop/TheThankYouCoStudio"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						shop the botanical collection →
+					</a>
+				</div>
+			</section>
+
+			<section class="page-content">
+				<div class="shell grid">
+					<div>
+						<img
+							src="/images/propies.png"
+							alt="Plant propagations and botanical handmade decor from The Thank You Co."
+						/>
+					</div>
+
+					<div class="copy">
+						<p class="eyebrow">FROM THE WORKTABLE</p>
+
+						<h2>Botanical gifts with a handmade feel</h2>
+
+						<p>
+							This part of the studio is for things inspired by plants,
+							natural textures, and the small details that make a room feel alive.
+						</p>
+
+						<p>
+							The collection may include plant propagations, plant-inspired gifts,
+							botanical decor, and small handmade pieces made for shelves,
+							desks, windowsills, and cozy corners.
+						</p>
+
+						<p>
+							Because the collection changes with the studio, many pieces are
+							seasonal, experimental, or made only in small quantities.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="details">
+				<div class="shell">
+					<h2>Made for plant lovers and cozy spaces</h2>
+
+					<div class="detail-grid">
+						<article>
+							<h3>Plant propagations</h3>
+							<p>
+								Small green cuttings and propagation pieces designed for
+								windowsills, desks, and plant-filled corners.
+							</p>
+						</article>
+
+						<article>
+							<h3>Botanical gifts</h3>
+							<p>
+								Plant-inspired handmade pieces that make thoughtful gifts
+								for gardeners, plant lovers, and homebodies.
+							</p>
+						</article>
+
+						<article>
+							<h3>Natural decor</h3>
+							<p>
+								Small-batch decor featuring natural textures, greenery,
+								and a soft handmade feel.
+							</p>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<Footer />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--ivory: #f5f0e6;
+		--paper: #fbf8f1;
+		--olive: #55523a;
+		--terracotta: #b97858;
+		--ink: #353629;
+		--shell: min(1180px, calc(100% - 42px));
+	}
+
+	body {
+		margin: 0;
+		background: var(--ivory);
+		color: var(--ink);
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.shell {
+		width: var(--shell);
+		margin: 0 auto;
+	}
+
+	.page-hero {
+		padding: 140px 0 110px;
+		background: var(--paper);
+	}
+
+	.eyebrow {
+		font-size: 0.72rem;
+		font-weight: 600;
+		letter-spacing: 0.24em;
+		text-transform: uppercase;
+		color: var(--terracotta);
+	}
+
+	h1,
+	h2,
+	h3 {
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		color: var(--olive);
+	}
+
+	h1 {
+		max-width: 900px;
+		font-size: clamp(4rem, 7vw, 7rem);
+		line-height: 0.92;
+		font-weight: 400;
+		margin: 18px 0 26px;
+	}
+
+	.intro {
+		max-width: 720px;
+		font-size: 1.2rem;
+		line-height: 1.8;
+	}
+
+	.shop-link {
+		display: inline-block;
+		margin-top: 28px;
+		color: var(--olive);
+		text-decoration: none;
+		border-bottom: 1px solid var(--olive);
+		padding-bottom: 5px;
+	}
+
+	.page-content {
+		padding: 110px 0;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 80px;
+		align-items: center;
+	}
+
+	.grid img {
+		width: 100%;
+		display: block;
+	}
+
+	.copy h2,
+	.details h2 {
+		font-size: clamp(3rem, 5vw, 5rem);
+		line-height: 1;
+		font-weight: 400;
+		margin: 12px 0 24px;
+	}
+
+	.copy p,
+	.detail-grid p {
+		line-height: 1.8;
+		color: rgba(53, 54, 41, 0.72);
+	}
+
+	.details {
+		padding: 100px 0;
+		background: var(--paper);
+	}
+
+	.detail-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 36px;
+		margin-top: 48px;
+	}
+
+	.detail-grid h3 {
+		font-size: 2rem;
+		margin-bottom: 12px;
+	}
+
+	@media (max-width: 800px) {
+		.grid,
+		.detail-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
