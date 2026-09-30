@@ -3,7 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----  
+---
 
 <!doctype html>
 <html lang="en">
@@ -27,15 +27,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			<section class="hero" aria-labelledby="hero-title">
 				<img
 					class="hero-image"
-					src="/images/mosaic_greenery.png"
+					src="/images/mosaic_greenery.jpeg"
 					alt="Colorful glass mosaic pieces surrounded by lush greenery."
 				/>
 
 				<div class="hero-content">
-
 					<p class="eyebrow">THE THANK YOU CO.</p>
+
 					<h1 id="hero-title">
-						<span class="visually-hidden">The Thank You Co. — </span>
 						a little studio<br />
 						of handmade things
 					</h1>
@@ -51,7 +50,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				</div>
 			</section>
 
-			<!-- ABOUT THE STUDIO -->
+			<!-- ABOUT -->
 			<section class="intro section" id="about">
 				<div class="shell intro-simple">
 					<div class="intro-copy">
@@ -94,8 +93,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 					</div>
 
 					<div class="category-grid">
+
 						<!-- PAPER GOODS -->
-						<article class="category">
+						<a class="category" href="/paper-goods">
 							<div class="category-photo-wrap">
 								<img
 									class="category-photo"
@@ -107,18 +107,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="category-copy">
 								<p class="number">01</p>
-	
+
 								<h3>Paper goods</h3>
 
 								<p>
 									Handmade plantable thank-you card sets, botanical seed paper,
 									and paper goods meant to feel as lovely in your hand as they do to give.
 								</p>
+
+								<span class="category-link">
+									follow the paper trail <span>→</span>
+								</span>
 							</div>
-						</article>
+						</a>
 
 						<!-- MOSAICS -->
-						<article class="category">
+						<a class="category" href="/mosaics">
 							<div class="category-photo-wrap">
 								<img
 									class="category-photo"
@@ -137,11 +141,15 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 									Small decorative pieces, candle dishes, trays, and colorful
 									objects with an intentionally handmade rhythm.
 								</p>
+
+								<span class="category-link">
+									see where the pieces landed <span>→</span>
+								</span>
 							</div>
-						</article>
+						</a>
 
 						<!-- BOTANICAL THINGS -->
-						<article class="category">
+						<a class="category" href="/botanical-things">
 							<div class="category-photo-wrap">
 								<img
 									class="category-photo"
@@ -160,37 +168,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 									Propagations, plant-inspired gifts, natural textures,
 									and little green things for quiet corners.
 								</p>
+
+								<span class="category-link">
+									peek at the plant shelf <span>→</span>
+								</span>
 							</div>
-						</article>
-					</div>
-
-					<!-- ETSY COLLECTION CTA -->
-					<div class="studio-collection">
-						<a
-							class="collection-card"
-							href="https://www.etsy.com/shop/TheThankYouCoStudio"
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label="View The Thank You Co. collection on Etsy"
-						>	
-							<span class="collection-card-inner">
-								<span class="collection-kicker">
-									FRESH FROM THE STUDIO
-								</span>
-
-								<span class="collection-title">
-									have a little look
-								</span>
-
-								<span class="collection-arrow" aria-hidden="true">
-									→
-								</span>
-							</span>
 						</a>
 					</div>
 				</div>
 			</section>
-			
+
 			<!-- ABOUT GRACE -->
 			<section class="maker section">
 				<div class="shell maker-grid">
@@ -224,76 +211,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 						<p>
 							You’ll find a bit of everything here as the studio grows: handmade
 							cards, paper goods, plant-inspired pieces, mosaics, seasonal creations,
-							and probably a few experiments along the way. I like to think of it
-							less as a traditional shop and more as my little studio — a place where
-							I can make something simply because it delighted me, and hopefully
-							pass a little of that delight on to you.
+							and probably a few experiments along the way.
 						</p>
 
 						<p>
 							I’m so glad you found your way here.
 						</p>
 
-						<p class="grace-signature">
-							— Grace
-						</p>
+						<p class="grace-signature">— Grace</p>
 
 						<div class="mini-rule"></div>
 
 						<p class="soft-note">
 							There will probably be flowers on the table. There will almost certainly
 							be a cat nearby.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<!-- COLLECTION -->
-			<section class="shop section" id="shop">
-				<div class="shell shop-grid">
-					<div class="shop-copy">
-						<p class="section-label">THE COLLECTION</p>
-
-						<h2>See what’s on the worktable.</h2>
-
-						<p>
-							The collection changes as the studio does. Some pieces come back,
-							some exist only once, and some are simply experiments that became favorites.
-						</p>
-
-						<a
-							class="collection-card"
-							href="https://www.etsy.com/shop/TheThankYouCoStudio"
-							target="_blank"
-							rel="noopener noreferrer"
-							aria-label="View The Thank You Co. collection on Etsy"
-						>
-							<span class="collection-card-inner">
-								<span class="collection-kicker">
-									FRESH FROM THE STUDIO
-								</span>
-
-								<span class="collection-title">
-									have a little look
-								</span>
-
-								<span class="collection-arrow" aria-hidden="true">
-									→
-								</span>
-							</span>
-						</a>
-					</div>
-
-					<div class="shop-note-card">
-						<p class="smallcaps">SMALL BATCHES</p>
-
-						<p class="shop-script">
-							made with care,<br />
-							never rushed.
-						</p>
-
-						<p class="heart-row">
-							♡ &nbsp; ✿ &nbsp; ♡
 						</p>
 					</div>
 				</div>
@@ -378,17 +309,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	.section {
 		padding: 110px 0;
 	}
-	.visually-hidden {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		padding: 0;
-		margin: -1px;
-		overflow: hidden;
-		clip: rect(0, 0, 0, 0);
-		white-space: nowrap;
-		border: 0;
-	}
 
 	.section-label,
 	.eyebrow,
@@ -441,7 +361,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		max-width: 720px;
 	}
 
-	/* warm paper panel */
 	.hero-content::before {
 		content: '';
 		position: absolute;
@@ -467,7 +386,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			inset 0 1px 0 rgba(255, 255, 255, 0.8);
 	}
 
-	/* subtle paper grain */
 	.hero-content::after {
 		content: '';
 		position: absolute;
@@ -559,8 +477,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 	.intro-copy h2,
 	.section-heading h2,
-	.maker-copy h2,
-	.shop-copy h2 {
+	.maker-copy h2 {
 		margin: 0 0 24px;
 		font-size: clamp(3.3rem, 5.6vw, 5.6rem);
 		line-height: 0.95;
@@ -568,8 +485,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 
 	.intro-copy p:not(.section-label):not(.script-note),
-	.maker-copy p:not(.section-label):not(.soft-note),
-	.shop-copy p:not(.section-label) {
+	.maker-copy p:not(.section-label):not(.soft-note) {
 		color: rgba(53, 54, 41, 0.72);
 		max-width: 690px;
 	}
@@ -581,80 +497,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		font-size: 1.8rem;
 		color: var(--terracotta);
 	}
-	/* SHOP BY COLLECTION */
-
-	.collections {
-		background: var(--paper);
-		border-top: 1px solid var(--line);
-		border-bottom: 1px solid var(--line);
-	}
-
-	.collection-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 28px;
-	}
-
-	.collection-tile {
-		display: block;
-		text-decoration: none;
-		color: inherit;
-		background: var(--ivory);
-		border: 1px solid var(--line);
-		transition:
-			transform 0.25s ease,
-			box-shadow 0.25s ease;
-	}
-
-	.collection-tile:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 18px 36px rgba(53, 54, 41, 0.12);
-	}
-
-	.collection-tile img {
-		width: 100%;
-		height: 330px;
-		object-fit: cover;
-	}
-
-	.collection-tile-copy {
-		padding: 24px 24px 28px;
-	}
-
-	.collection-tile-copy .number {
-		margin: 0 0 6px;
-		font-size: 0.68rem;
-		letter-spacing: 0.16em;
-		color: var(--sage);
-	}
-
-	.collection-tile-copy h3 {
-		margin: 0 0 12px;
-		font-size: 2.4rem;
-		color: var(--olive);
-	}
-
-	.collection-tile-copy p:last-child {
-		margin: 0;
-		color: rgba(53, 54, 41, 0.68);
-		line-height: 1.7;
-	}
-
-	@media (max-width: 900px) {
-		.collection-grid {
-			grid-template-columns: 1fr;
-		}
-
-		.collection-tile img {
-			height: 420px;
-		}
-	}
-
-	@media (max-width: 640px) {
-		.collection-tile img {
-			height: 320px;
-		}
-	}
 
 	/* STUDIO */
 
@@ -662,12 +504,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		background: var(--ivory);
 		border-top: 1px solid var(--line);
 		border-bottom: 1px solid var(--line);
-	}
-
-	.studio-collection {
-		display: flex;
-		justify-content: center;
-		margin-top: 82px;
 	}
 
 	.section-heading {
@@ -691,6 +527,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 
 	.category {
+		display: block;
+		color: inherit;
+		text-decoration: none;
 		border-top: 1px solid var(--olive);
 		padding-top: 16px;
 	}
@@ -705,7 +544,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		transition: transform 0.5s ease;
+		transition:
+			transform 0.5s ease,
+			filter 0.5s ease;
 	}
 
 	.category:hover .category-photo {
@@ -729,14 +570,40 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: var(--olive);
 	}
 
-	.category-copy h3 a {
-		color: inherit;
-		text-decoration: none;
+	.category-copy p {
+		color: rgba(53, 54, 41, 0.68);
 	}
 
-	.category-copy p:last-child {
-		color: rgba(53, 54, 41, 0.68);
-		margin-bottom: 0;
+	.category-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 9px;
+		margin-top: 10px;
+		padding-bottom: 4px;
+
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		font-size: 1.15rem;
+		font-style: italic;
+		font-weight: 600;
+
+		color: var(--terracotta);
+
+		border-bottom: 1px solid transparent;
+
+		transition:
+			border-color 0.2s ease,
+			transform 0.2s ease;
+	}
+
+	.category-link span {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 0.8rem;
+		font-style: normal;
+	}
+
+	.category:hover .category-link {
+		border-bottom-color: var(--terracotta);
+		transform: translateX(3px);
 	}
 
 	/* MAKER */
@@ -788,168 +655,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		max-width: 520px;
 	}
 
-	/* SHOP / COLLECTION */
-
-	.shop {
-		background: #e2d9c8;
-		overflow: hidden;
-	}
-
-	.shop-grid {
-		display: grid;
-		grid-template-columns: 1.2fr 0.8fr;
-		gap: 90px;
-		align-items: center;
-	}
-
-	.collection-card {
-		position: relative;
-		display: block;
-		width: min(100%, 610px);
-		margin-top: 38px;
-		padding: 28px;
-		overflow: hidden;
-		text-decoration: none;
-		border-radius: 26px;
-
-		background-image:
-			linear-gradient(
-				rgba(255, 250, 242, 0.02),
-				rgba(255, 250, 242, 0.02)
-			),
-			url('/images/glass-mosaics.png');
-
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-
-		box-shadow:
-			0 24px 55px rgba(60, 47, 34, 0.16),
-			0 5px 14px rgba(60, 47, 34, 0.08);
-
-		transition:
-			transform 0.35s ease,
-			box-shadow 0.35s ease;
-	}
-
-	.collection-card::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		z-index: 1;
-
-		background:
-			linear-gradient(
-				125deg,
-				rgba(255, 255, 255, 0.26) 0%,
-				rgba(255, 255, 255, 0.08) 22%,
-				rgba(255, 255, 255, 0) 52%
-			);
-
-		pointer-events: none;
-	}
-
-	.collection-card::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		z-index: 2;
-		border-radius: inherit;
-
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.28),
-			inset 0 0 34px rgba(46, 36, 24, 0.08);
-
-		pointer-events: none;
-	}
-
-	.collection-card:hover {
-		transform: translateY(-6px);
-
-		box-shadow:
-			0 34px 70px rgba(60, 47, 34, 0.21),
-			0 7px 18px rgba(60, 47, 34, 0.09);
-	}
-
-	.collection-card-inner {
-		position: relative;
-		z-index: 3;
-		display: flex;
-		min-height: 210px;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		padding: 46px 50px 40px;
-		text-align: center;
-		border-radius: 16px;
-
-		background:
-			linear-gradient(
-				160deg,
-				rgba(255, 251, 243, 0.97),
-				rgba(245, 236, 220, 0.96)
-			);
-
-		box-shadow:
-			0 5px 20px rgba(54, 44, 32, 0.17),
-			inset 0 0 0 1px rgba(255, 255, 255, 0.72);
-	}
-
-	.collection-kicker {
-		display: block;
-		margin-bottom: 13px;
-		font-family: 'Montserrat', sans-serif;
-		font-size: 0.62rem;
-		font-weight: 600;
-		letter-spacing: 0.26em;
-		text-transform: uppercase;
-		color: var(--terracotta);
-	}
-
-	.collection-title {
-		display: block;
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: clamp(3rem, 4.6vw, 4.35rem);
-		font-style: italic;
-		font-weight: 400;
-		line-height: 0.94;
-		color: var(--olive);
-	}
-
-	.collection-arrow {
-		display: inline-block;
-		margin-top: 18px;
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-size: 1.55rem;
-		color: var(--olive);
-		transition: transform 0.25s ease;
-	}
-
-	.collection-card:hover .collection-arrow {
-		transform: translateX(6px);
-	}
-
-	.shop-note-card {
-		border: 1px solid rgba(85, 82, 58, 0.38);
-		padding: 58px 48px;
-		text-align: center;
-		background: rgba(251, 248, 241, 0.35);
-	}
-
-	.shop-script {
-		margin: 12px 0 18px;
-		font-family: 'Cormorant Garamond', Georgia, serif;
-		font-style: italic;
-		font-size: 3rem;
-		line-height: 0.95;
-		color: var(--olive);
-	}
-
-	.heart-row {
-		color: var(--terracotta);
-		letter-spacing: 0.18em;
-	}
-
 	/* CLOSING */
 
 	.closing {
@@ -964,7 +669,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		border-top: 1px solid var(--line);
 	}
 
-	/* FLOWER BACKGROUND */
 	.closing::before {
 		content: '';
 		position: absolute;
@@ -981,7 +685,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		z-index: 0;
 	}
 
-	/* Keep the flowers vivid — only a tiny softening layer */
 	.closing::after {
 		content: '';
 		position: absolute;
@@ -993,7 +696,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		z-index: 1;
 	}
 
-	/* CONTENT */
 	.closing-inner {
 		position: relative;
 		z-index: 2;
@@ -1007,7 +709,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		justify-content: center;
 	}
 
-	/* CREAM HORIZONTAL OVAL */
 	.closing-pill {
 		display: flex;
 		align-items: center;
@@ -1040,7 +741,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		color: #4b4d38;
 	}
 
-	/* LOGO BELOW THE OVAL */
 	.closing-logo {
 		width: 105px;
 		height: 105px;
@@ -1058,34 +758,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			0 8px 22px rgba(53, 54, 41, 0.14);
 	}
 
-	/* MOBILE */
-	@media (max-width: 640px) {
-		.closing {
-			min-height: 520px;
-			padding: 90px 0;
-		}
-
-		.closing-inner {
-			min-height: 340px;
-		}
-
-		.closing-pill {
-			width: 94%;
-			min-height: 100px;
-
-			padding: 20px 30px;
-		}
-
-		.closing-pill p {
-			font-size: 2.25rem;
-		}
-
-		.closing-logo {
-			width: 88px;
-			height: 88px;
-			margin-top: 24px;
-		}
-	}
 	/* TABLET */
 
 	@media (max-width: 900px) {
@@ -1094,7 +766,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		}
 
 		.maker-grid,
-		.shop-grid,
 		.section-heading {
 			grid-template-columns: 1fr;
 			gap: 50px;
@@ -1111,11 +782,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 		.maker-photo-wrap {
 			margin: 0 auto;
-		}
-
-		.collection-card,
-		.shop-note-card {
-			max-width: 640px;
 		}
 	}
 
@@ -1151,15 +817,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			border-radius: 8px;
 		}
 
-		.hero-content::before {
-			background:
-				linear-gradient(
-					180deg,
-					rgba(251, 248, 241, 0.97),
-					rgba(245, 238, 226, 0.96)
-				);
-		}
-
 		.hero h1 {
 			font-size: clamp(4rem, 16vw, 5.5rem);
 		}
@@ -1172,36 +829,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			height: 390px;
 		}
 
-		.collection-card {
-			padding: 18px;
-			border-radius: 20px;
-		}
-
-		.collection-card-inner {
-			min-height: 190px;
-			padding: 38px 24px 34px;
-			border-radius: 13px;
-		}
-
-		.collection-title {
-			font-size: 3rem;
-		}
-
-		.shop-note-card {
-			padding: 44px 24px;
-		}
-
 		.closing {
-			padding: 100px 0 110px;
+			min-height: 520px;
+			padding: 90px 0;
 		}
 
-		.closing-note {
-			font-size: 2.3rem;
+		.closing-inner {
+			min-height: 340px;
+		}
+
+		.closing-pill {
+			width: 94%;
+			min-height: 100px;
+			padding: 20px 30px;
+		}
+
+		.closing-pill p {
+			font-size: 2.25rem;
 		}
 
 		.closing-logo {
 			width: 88px;
 			height: 88px;
+			margin-top: 24px;
 		}
 	}
 </style>
