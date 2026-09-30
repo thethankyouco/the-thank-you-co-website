@@ -107,15 +107,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
 							<div class="category-copy">
 								<p class="number">01</p>
-
-								<h3>
-									<a href="/paper-goods/">Paper goods</a>
-								</h3>
+	
+								<h3>Paper goods</h3>
 
 								<p>
-									Handmade plantable thank-you cards, botanical seed paper,
-									handmade greeting cards, and small-batch paper goods meant to feel
-									as lovely in your hand as they do to give.
+									Handmade plantable thank-you card sets, botanical seed paper,
+									and paper goods meant to feel as lovely in your hand as they do to give.
 								</p>
 							</div>
 						</article>
@@ -134,13 +131,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							<div class="category-copy">
 								<p class="number">02</p>
 
-								<h3>
-									<a href="/mosaics/">Mosaics</a>
-								</h3>
+								<h3>Mosaics</h3>
 
 								<p>
-									Handmade glass mosaic candle dishes, decorative trays, trinket dishes,
-									and colorful small-batch home decor with an intentionally handmade rhythm.
+									Small decorative pieces, candle dishes, trays, and colorful
+									objects with an intentionally handmade rhythm.
 								</p>
 							</div>
 						</article>
@@ -159,10 +154,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							<div class="category-copy">
 								<p class="number">03</p>
 
-								<h3>
-									<a href="/botanical-things/">Botanical things</a>
-
-								</h3>
+								<h3>Botanical things</h3>
 
 								<p>
 									Propagations, plant-inspired gifts, natural textures,
@@ -171,67 +163,34 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 							</div>
 						</article>
 					</div>
-				</div>
-			</section>
 
-			<!-- SHOP BY COLLECTION -->
-			<section class="collections section">
-				<div class="shell">
-					<div class="section-heading">
-						<div>
-							<p class="section-label">SHOP BY COLLECTION</p>
-							<h2>Find your corner of the studio.</h2>
-						</div>
+					<!-- ETSY COLLECTION CTA -->
+					<div class="studio-collection">
+						<a
+							class="collection-card"
+							href="https://www.etsy.com/shop/TheThankYouCoStudio"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="View The Thank You Co. collection on Etsy"
+						>	
+							<span class="collection-card-inner">
+								<span class="collection-kicker">
+									FRESH FROM THE STUDIO
+								</span>
 
-						<p class="section-sidecopy">
-							Browse handmade mosaics, paper goods, and botanical pieces,
-							each made in small batches with a little personality.
-						</p>
-					</div>
+								<span class="collection-title">
+									have a little look
+								</span>
 
-					<div class="collection-grid">
-						<a class="collection-tile" href="/mosaics/">
-							<img
-								src="/images/mosaics.png"
-								alt="Handmade glass mosaic decor from The Thank You Co."
-									loading="lazy"
-							/>
-							<div class="collection-tile-copy">
-								<p class="number">01</p>
-								<h3>Mosaics</h3>
-								<p>Glass mosaic candle dishes, trays, trinket dishes, and colorful handmade decor.</p>
-							</div>
-						</a>
-
-						<a class="collection-tile" href="/paper-goods/">
-							<img
-								src="/images/papers.png"
-								alt="Plantable cards and handmade paper goods from The Thank You Co."
-								loading="lazy"
-							/>
-							<div class="collection-tile-copy">
-								<p class="number">02</p>
-								<h3>Paper goods</h3>
-								<p>Plantable thank-you cards, botanical seed paper, and handmade greeting cards.</p>
-							</div>
-						</a>
-
-						<a class="collection-tile" href="/botanical-things/">
-							<img
-								src="/images/propies.png"
-								alt="Botanical gifts and plant-inspired handmade decor from The Thank You Co."
-								loading="lazy"
-							/>
-							<div class="collection-tile-copy">
-								<p class="number">03</p>
-								<h3>Botanical things</h3>
-								<p>Propagations, plant-inspired gifts, natural textures, and little green things.</p>
-							</div>
+								<span class="collection-arrow" aria-hidden="true">
+									→
+								</span>
+							</span>
 						</a>
 					</div>
 				</div>
 			</section>
-
+			
 			<!-- ABOUT GRACE -->
 			<section class="maker section">
 				<div class="shell maker-grid">
@@ -703,6 +662,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		background: var(--ivory);
 		border-top: 1px solid var(--line);
 		border-bottom: 1px solid var(--line);
+	}
+
+	.studio-collection {
+		display: flex;
+		justify-content: center;
+		margin-top: 82px;
 	}
 
 	.section-heading {
