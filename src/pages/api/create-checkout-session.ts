@@ -10,7 +10,7 @@ type StripeCheckoutSessionResponse = {
 };
 
 export const POST: APIRoute = async ({ locals }) => {
-	const { env } = locals.runtime;
+	const env = locals.runtime.env as Record<string, string | undefined>;
 	const secretKey = env.STRIPE_SECRET_KEY;
 
 	if (!secretKey) {
