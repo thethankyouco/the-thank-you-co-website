@@ -5,7 +5,7 @@ import Footer from '../components/Footer.astro';
 
 export const prerender = false;
 
-const { env } = Astro.locals.runtime;
+const env = Astro.locals.runtime.env as Record<string, string | undefined>;
 const stripePublishableKey = env.VITE_STRIPE_PUBLISHABLE_KEY;
 ---
 
