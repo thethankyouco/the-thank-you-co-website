@@ -1,0 +1,190 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export const prerender = false;
+
+const { env } = Astro.locals.runtime;
+const stripePublishableKey = env.VITE_STRIPE_PUBLISHABLE_KEY;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title="Checkout | The Thank You Co."
+			description="Secure checkout for The Thank You Co."
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+
+		<script src="https://js.stripe.com/dahlia/stripe.js"></script>
+	</head>
+
+	<body>
+		<Header />
+
+		<main class="checkout-shell">
+			<div class="checkout-heading">
+				<p class="eyebrow">THE THANK YOU CO.</p>
+				<h1>Checkout</h1>
+				<p>Complete your order securely below.</p>
+			</div>
+
+			<div id="checkout-form" aria-live="polite"></div>
+			<p id="checkout-status" role="status"></p>
+		</main>
+
+		<Footer />
+
+		<script is:inline define:vars={{ stripePublishableKey }}>
+			(async () => {
+				const status = document.getElementById('checkout-status');
+
+				if (!stripePublishableKey) {
+					status.textContent =
+						'Checkout is not configured yet. Please add VITE_STRIPE_PUBLISHABLE_KEY.';
+					return;
+				}
+
+				try {
+					const stripe = Stripe(stripePublishableKey, {
+						betas: ['custom_checkout_payment_form_1'],
+					});
+
+					const appearance = {
+						theme: 'stripe',
+						labels: 'auto',
+						inputs: 'spaced',
+						variables: {
+							borderRadius: '4px',
+							colorBackground: '#fff8ec',
+							colorDanger: '#d94f3d',
+							colorPrimary: '#207a76',
+							colorSuccess: '#477a61',
+							colorText: '#403d38',
+							fontFamily: 'default',
+							fontSizeBase: '16px',
+							spacingUnit: '4px',
+						},
+					};
+
+					const clientSecret = fetch('/api/create-checkout-session', {
+						method: 'POST',
+					})
+						.then(async (response) => {
+							const json = await response.json();
+
+							if (!response.ok || !json.client_secret) {
+								throw new Error(json.error ?? 'Unable to start checkout.');
+							}
+
+							return json.client_secret;
+						});
+
+					const checkout = stripe.initCheckoutFormSdk({
+						clientSecret,
+						appearance,
+					});
+
+					const form = checkout.createForm({ layout: 'expanded' });
+					form.mount('#checkout-form');
+
+					const loadActionsResult = await checkout.loadActions();
+
+					if (loadActionsResult.type === 'success') {
+						form.on('confirm', async (event) => {
+							try {
+								await loadActionsResult.actions.confirm({
+									formConfirmEvent: event,
+								});
+							} catch (error) {
+								console.error('Payment confirmation error:', error);
+								status.textContent =
+									'We could not confirm the payment. Please review your information and try again.';
+							}
+						});
+					} else {
+						status.textContent = 'Checkout could not be initialized.';
+					}
+				} catch (error) {
+					console.error('Checkout initialization error:', error);
+					status.textContent =
+						error instanceof Error
+							? error.message
+							: 'Checkout could not be initialized.';
+				}
+			})();
+		</script>
+	</body>
+</html>
+
+<style>
+	:global(*) {
+		box-sizing: border-box;
+	}
+
+	:global(body) {
+		margin: 0;
+		background: #fff8ec;
+		color: #403d38;
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.checkout-shell {
+		width: min(760px, calc(100% - 40px));
+		margin: 0 auto;
+		padding: 72px 0 88px;
+	}
+
+	.checkout-heading {
+		margin-bottom: 34px;
+		text-align: center;
+	}
+
+	.eyebrow {
+		margin: 0 0 10px;
+		color: #207a76;
+		font-size: .68rem;
+		font-weight: 600;
+		letter-spacing: .2em;
+	}
+
+	h1 {
+		margin: 0;
+		color: #403d38;
+		font-family: 'Cormorant Garamond', Georgia, serif;
+		font-size: clamp(2.8rem, 7vw, 4.5rem);
+		font-weight: 500;
+		line-height: 1;
+	}
+
+	.checkout-heading p:last-child {
+		margin: 14px 0 0;
+		font-size: .9rem;
+	}
+
+	#checkout-form {
+		min-height: 240px;
+	}
+
+	#checkout-status {
+		margin: 18px 0 0;
+		color: #d94f3d;
+		font-size: .85rem;
+		text-align: center;
+	}
+
+	@media (max-width: 600px) {
+		.checkout-shell {
+			width: min(100% - 28px, 760px);
+			padding: 48px 0 64px;
+		}
+	}
+</style>
